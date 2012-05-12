@@ -1,7 +1,5 @@
 Twitter Hashtag Suggestion Engine
 =========
-
-#Info
 ##Authors 
 Joel Kemp and Wai Khoo
 ##Project
