@@ -1,0 +1,4 @@
+# Pull Ashton Kutcher's Past 3200 tweets into a JSON file
+curl -s --user-agent 'Mozilla' --insecure 'https://twitter.com/statuses/user_timeline/aplusk.json?count=100&page=[1-32]' > ashton.json
+
+curl -s --user-agent 'Mozilla' --insecure 'https://twitter.com/statuses/user_timeline/mrjoelkemp.json?count=100&page=[1-32]' > joel.json
