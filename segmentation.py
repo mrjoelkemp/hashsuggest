@@ -1,4 +1,4 @@
-# Wai
+# File Author: Wai Khoo
 
 # Twitter Distance
 def tweet_distance(tw1, tw2):

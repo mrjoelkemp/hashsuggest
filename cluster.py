@@ -18,23 +18,6 @@ class Cluster:
 			
 		return ''
 		
-	# Retrieval functions for data members
-	def getTweets(self):
-		return self.tweets
-		
-	def getCentroid(self):
-		return self.centroid
-		
-	def getTF(self):
-		return self.tf
-		
-	def getDT(self):
-		return self.dt
-		
-	# Set centroid (c is a string)
-	def setCentroid(self, c):
-		self.centroid = c
-		
 	# Compute term frequency from tweets and extract dominant term
 	def computeTF_DT(self):
 		str_tweets = self.tokenise(self.joinString(self.tweets))
