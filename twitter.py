@@ -4,6 +4,7 @@
 
 import simplejson
 import re
+import string
 
 def main():
 	# Open the json text file
@@ -42,6 +43,13 @@ def main():
 		handle = "@"
 		removeFromElements(handle, pieces)
 
+		removeAllOccurrences("\\", pieces)
+		removeAllOccurrences("", pieces)
+
+		# Remove all punctuation
+		punctuation = string.punctuation
+		removeFromElements(punc, pieces)
+
 		for p in pieces:
 			print p
 
@@ -73,10 +81,9 @@ def removeFromString(substring, s):
 				we're removing the entire word, not just the matching chars
 	Returns: 	A new string with the contents of s minus the substring-contained words
 	"""
-	import string
-
 	result = ""
-	for word in s:
+	words = s.split()
+	for word in words:
 		contains = word.count(substring) > 0
 		# Build a string of non-occurrences.
 		if not contains:
@@ -90,7 +97,6 @@ def removeExactSubstring(substring, s):
 	Purpose: 	Removes the substring from the string, s by replacing the substring by a space
 	Returns: 	The modified string
 	""" 
-	import string
 	result = string.replace(s, substring, "")
 	return result
 
