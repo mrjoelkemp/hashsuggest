@@ -9,14 +9,16 @@ def removeAllOccurrences(s, data):
 	Purpose: 	Removes all occurrences of s from the passed list, data.
 	Precond: 	data = list
 				s 	 = string
-	Notes: 		Inplace modification of list
+	Returns: 	A copy of the list with the instances of s removed.
 	"""
+	copy = list(data)
 	while True:
-		num_instances = data.count(s)
+		num_instances = copy.count(s)
 		finished = num_instances == 0
 		if finished:
 			break
-		data.remove(s)
+		copy.remove(s)
+	return copy
 
 def removeStopWords(data):
 	"""
@@ -56,8 +58,12 @@ def stem(data):
 	Returns:	A list containing a stem for each word in the words list
 	"""
 	stems = []
+	print data
 	for w in data:
+		print "Word:", w
 		s = stem(w)
+		print "Stem:", s
+		input()
 		stems.append(s)		
 	return stems
 
@@ -78,12 +84,9 @@ def main():
 
 		file_write = open("data/tweetsprocessedashton.txt", "w")
 		for tokens in tweets:
-			print tokens
-			
 			# Remove stop words from the list of tokens
 			removeStopWords(tokens)
-			print "Stop word removal: ", tokens
-			input()
+			
 			# Remove the stems
 			tokens = stem(tokens)
 			print "Stemmed: ", tokens
