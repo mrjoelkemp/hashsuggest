@@ -24,16 +24,18 @@ def removeStopWords(data):
 	"""
 	Purpose: 	Removes instances of stop words from the passed list, data
 	Precond: 	Data is a list of strings
-	Notes: 		Inplace modification of data
-				Stop words loaded from a textfile in the data/ directory.
+	Returns: 	
+	Notes: 		Stop words loaded from a textfile in the data/ directory.
 	"""
 	try:	
+		copy = list(data)
 		stop_words = load_stop_words()
 		
 		for sw in stop_words:
-			if sw in data:
+			if sw in copy:
 				# Remove all occurrences of that stop word
-				removeAllOccurrences(sw, data)
+				copy = removeAllOccurrences(sw, copy)
+		return copy
 
 	except Exception, e:
 		print "removeStopWords:", e
