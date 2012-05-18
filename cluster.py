@@ -1,6 +1,7 @@
 # Author: Wai Khoo
 
-from sets import Set
+from features import tweet_distance
+from features import computeTF_DT
 
 class Cluster:
 	# Init the object
@@ -18,33 +19,5 @@ class Cluster:
 			
 		return ''
 		
-	# Compute term frequency from tweets and extract dominant term
-	def computeTF_DT(self):
-		str_tweets = self.tokenise(self.joinString(self.tweets))
-		unique_tweets = Set((word for word in str_tweets))
-		
-		self.tf = dict([(term, self.freq(term, str_tweets)) for term in unique_tweets])
-		
-		result = sorted(self.tf.items(), key=lambda x:x[1], reverse=True)
-		self.dt = result[0][0]
-		
-	# Helper function to compute frequency
-	def freq(self, word, sentence):
-		return sentence.count(word)
-		
-	# break string up into tokens
-	def tokenise(self, string):
-		""" break string up into tokens """
-		string = string.replace(".", "")
-		string = string.replace(",", "")
-		string = string.replace("\s+", " ")
-		string = string.lower()
-		words = string.split(" ")
-		return [word for word in words]
-	
-	# Convert a list into a single string
-	def joinString(self, list):
-		str_list = []
-		for tweet in list:
-			str_list.append(tweet + ' ')
-		return ''.join(str_list)
+	def update(self):
+		self.tf, self.dt = computeTF_DT(self.tweets)
