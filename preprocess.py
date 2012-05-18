@@ -40,16 +40,15 @@ def load_stop_words():
 	"""
 	Purpose:	Loads the stop words from file.
 	Notes: 		The file is currently hardcoded.
-	Returns:	A list of strings where each string is a stop word.
+	Returns:	A list of lowercase strings where each string is a stop word.
 	"""
-	file = open("data/stopwords.txt")
+	file = open("data/stopwords2.txt")
 	stop_words = []
 	for line in file:
-		stop_words.append(line)
+		line = line.rstrip()
+		stop_words.append(line.lower())
 	file.close()
-	
-	# Our stop words are a list of the string's tokens
-	stop_words = stop_words[0].split(",")
+	print "Stop words: ", stop_words
 	return stop_words
 
 def stem(data):
@@ -74,6 +73,7 @@ def main():
 		# Grab all of the tweets from file.
 		tweets = []
 		for tweet in file:
+			tweet = tweet.lower()
 			# split the tweet into tokens
 			tokens = tweet.split()
 			tweets.append(tokens)
@@ -86,8 +86,8 @@ def main():
 			
 			# Remove stop words from the list of tokens
 			removeStopWords(tokens)
-			#print "Stop word removal: ", tokens
-			
+			print "Stop word removal: ", tokens
+			input()
 			# Remove the stems
 			tokens = stem(tokens)
 			print "Stemmed: ", tokens
