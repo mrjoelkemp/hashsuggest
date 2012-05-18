@@ -24,7 +24,7 @@ def removeStopWords(data):
 	"""
 	Purpose: 	Removes instances of stop words from the passed list, data
 	Precond: 	Data is a list of strings
-	Returns: 	
+	Returns: 	A copy of data with the stop words removed
 	Notes: 		Stop words loaded from a textfile in the data/ directory.
 	"""
 	try:	
@@ -54,13 +54,12 @@ def load_stop_words():
 	file.close()
 	return stop_words
 
-def stem(data):
+def removeStems(data):
 	"""
 	Purpose: 	Computes the stem of each word in the passed word list
 	Returns:	A list containing a stem for each word in the words list
 	"""
 	stems = []
-	print data
 	for w in data:
 		print "Word:", w
 		s = stem(w)
@@ -87,15 +86,16 @@ def main():
 		file_write = open("data/tweetsprocessedashton.txt", "w")
 		for tokens in tweets:
 			# Remove stop words from the list of tokens
-			removeStopWords(tokens)
-			
+			stopped = removeStopWords(tokens)
+			print "Stopped: ", stopped
+			input()
 			# Remove the stems
-			tokens = stem(tokens)
-			print "Stemmed: ", tokens
+			stems = removeStems(stopped)
+			print "Stemmed: ", stems
 			input()
 			
 			# Convert the token list to a string representation
-			token_string = "".join(tokens)
+			token_string = "".join(stems)
 
 			# Store the processed tweets in a new file
 			file_write.write(token_string + "\n")
