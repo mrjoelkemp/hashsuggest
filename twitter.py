@@ -28,39 +28,58 @@ def main():
 		pieces = rg.split(data)
 
 		# Remove junk elements
-		pieces = removeAllOccurrences(pieces, "")
-		pieces = removeAllOccurrences(pieces, ":")
-		pieces = removeAllOccurrences(pieces, "\"text\"")
-		pieces = removeAllOccurrences(pieces, "\"\\\"")
-		pieces = removeAllOccurrences(pieces, "}]")
+		junk = ["", ":", "\"text\"", "\"\\\"", "}]"]
+		for j in junk:
+			pieces = removeAllOccurrences(pieces, j)
 
 		# Remove internal double quotes from tweets.
-		# Tweets are enclosed with single quotes
-		dub_quote = "\""
-		for p in pieces:
-			has_quotes = p.count(dub_quote) > 0		
-			if has_quotes:
-				p = p[1:-1]
-			print p
+		removeDoubleQuotes(pieces)
 
-		
-		#print pieces
+		# Remove embedded links
+		link = "http"
+		removeElementsContaining(link, pieces)
+
+		for p in pieces:
+			print p
 
 	except Exception, e:
 		print "Exception: ", e
 
+def removeElementsContaining(s, data):
+	"""
+	Purpose: 	Removes elements from data containing s
+	Notes: 		Inplace modification of list
+	""" 
+	for p in data:
+		contains = p.count(s) > 0
+		if contains:
+			data.remove(p)
+
+
+def removeDoubleQuotes(data):
+	"""
+	Purpose: 	Tweets are enclosed with single quotes
+	Notes: 		Inplace modification of list
+	"""
+	dub_quote = "\""
+	for i in range(len(data)):
+		p = data[i]
+		has_quotes = p.count(dub_quote) > 0		
+		if has_quotes:
+			data[i] = p[1:-1]
+		
 def removeAllOccurrences(data, s):
 	"""
 	Purpose: 	Removes all occurrences of s from the passed list, data.
 	Precond: 	data = list
 				s 	 = string
-	Returns:	data with no instances of s
+	Notes: 		Inplace modification of list
 	"""
 	while True:
-		num_blanks = data.count(s)
-		finished = num_blanks == 0
+		num_instances = data.count(s)
+		finished = num_instances == 0
 		if finished:
 			break
 		data.remove(s)
-	return data		
+
 main()
