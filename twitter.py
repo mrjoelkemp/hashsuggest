@@ -43,12 +43,14 @@ def main():
 		handle = "@"
 		removeFromElements(handle, pieces)
 
+		# Remove all punctuation
+		punctuation = list(string.punctuation)
+		punctuation.append("")
+		for punc in punctuation:
+			removeFromElements(punc, pieces, True)
+
 		removeAllOccurrences("\\", pieces)
 		removeAllOccurrences("", pieces)
-
-		# Remove all punctuation
-		punctuation = string.punctuation
-		removeFromElements(punc, pieces)
 
 		for p in pieces:
 			print p
@@ -62,16 +64,20 @@ def removeJunk(data):
 	for j in junk:
 		removeAllOccurrences(j, data)
 
-def removeFromElements(substring, data):
+def removeFromElements(substring, data, exact=False):
 	"""
 	Purpose: 	Strips the substring from the elements of data, if it exists
+	Precond: 	exact = whether or not we should remove the words or just the chars of the subtring.
 	Notes:		Inplace modification of the list
 	"""
 	for i in range(len(data)):
 		elem = data[i]
 		contains = elem.count(substring)
 		if contains:
-			removed = removeFromString(substring, elem)
+			if exact:
+				removed = removeExactSubstring(substring, elem)
+			else:
+				removed = removeFromString(substring, elem)
 			data[i] = removed
 
 def removeFromString(substring, s):
