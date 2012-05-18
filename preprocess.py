@@ -3,6 +3,7 @@
 # Purpose: 	A collection of functions that strip unnecessary characters from tweets.
 # Notes:	Tweet preprocessing is done offline, so this doesn't have to be a module.
 from stemming.porter2 import stem	# Stemming algorithm
+from twitter import removeAllOccurrences
 
 def removeStopWords(data):
 	"""
@@ -13,9 +14,11 @@ def removeStopWords(data):
 	"""
 	try:	
 		stop_words = load_stop_words()
-
-		
-
+		for sw in stop_words:
+			if not sw in data:
+				continue
+			# Remove all occurrences of that stop word
+			removeAllOccurrences(sw, data)
 
 	except Exception, e:
 		print "removeStopWords:", e
@@ -32,7 +35,7 @@ def load_stop_words():
 		stop_words.append(line)
 	file.close()
 	# If there's only a single string
-	if(len(stop_words) == 1)
+	if(len(stop_words) == 1):
 		# Our stop words are a list of the string's tokens
 		stop_words = stop_words[0].split()
 	return stop_words
