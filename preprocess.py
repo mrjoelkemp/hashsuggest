@@ -42,13 +42,12 @@ def load_stop_words():
 	Notes: 		The file is currently hardcoded.
 	Returns:	A list of lowercase strings where each string is a stop word.
 	"""
-	file = open("data/stopwords2.txt")
+	file = open("data/stopwords.txt")
 	stop_words = []
 	for line in file:
 		line = line.rstrip()
 		stop_words.append(line.lower())
 	file.close()
-	print "Stop words: ", stop_words
 	return stop_words
 
 def stem(data):
