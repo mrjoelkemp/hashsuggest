@@ -9,29 +9,33 @@ def removeAllOccurrences(s, data):
 	Purpose: 	Removes all occurrences of s from the passed list, data.
 	Precond: 	data = list
 				s 	 = string
-	Notes: 		Inplace modification of list
+	Returns: 	A copy of the list with the instances of s removed.
 	"""
+	copy = list(data)
 	while True:
-		num_instances = data.count(s)
+		num_instances = copy.count(s)
 		finished = num_instances == 0
 		if finished:
 			break
-		data.remove(s)
+		copy.remove(s)
+	return copy
 
 def removeStopWords(data):
 	"""
 	Purpose: 	Removes instances of stop words from the passed list, data
 	Precond: 	Data is a list of strings
-	Notes: 		Inplace modification of data
-				Stop words loaded from a textfile in the data/ directory.
+	Returns: 	A copy of data with the stop words removed
+	Notes: 		Stop words loaded from a textfile in the data/ directory.
 	"""
 	try:	
+		copy = list(data)
 		stop_words = load_stop_words()
 		
 		for sw in stop_words:
-			if sw in data:
+			if sw in copy:
 				# Remove all occurrences of that stop word
-				removeAllOccurrences(sw, data)
+				copy = removeAllOccurrences(sw, copy)
+		return copy
 
 	except Exception, e:
 		print "removeStopWords:", e
@@ -50,16 +54,15 @@ def load_stop_words():
 	file.close()
 	return stop_words
 
-def stem(data):
+def removeStems(data):
 	"""
 	Purpose: 	Computes the stem of each word in the passed word list
 	Returns:	A list containing a stem for each word in the words list
 	"""
-	stems = []
-	for w in data:
-		s = stem(w)
-		stems.append(s)		
-	return stems
+	stemList = []
+	for d in data:
+		stemList.append(stem(d))
+	return stemList
 
 def main():
 	try:
@@ -78,25 +81,28 @@ def main():
 
 		file_write = open("data/tweetsprocessedashton.txt", "w")
 		for tokens in tweets:
-			print tokens
-			
 			# Remove stop words from the list of tokens
-			removeStopWords(tokens)
-			print "Stop word removal: ", tokens
-			input()
+			stopped = removeStopWords(tokens)
+			
 			# Remove the stems
-			tokens = stem(tokens)
-			print "Stemmed: ", tokens
-			input()
+			stems = removeStems(stopped)
 			
 			# Convert the token list to a string representation
-			token_string = "".join(tokens)
+			token_string = ""
+			for s in stems:
+				token_string += s + " "
+			token_string = token_string.rstrip()
+			
+			# Prevent blanks
+			if token_string == "":
+				continue 
 
 			# Store the processed tweets in a new file
 			file_write.write(token_string + "\n")
 
 		file_write.close()
-	
+		print "Done creating preprocessed tweet file."
+
 	except Exception, e:
 		print "Error:", e
 
