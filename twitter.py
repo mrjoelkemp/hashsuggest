@@ -27,23 +27,32 @@ def main():
 		#	and a few empty strings.
 		pieces = rg.split(data)
 
-		# Remove junk elements
-		junk = ["", ":", "\"text\"", "\"\\\"", "}]"]
-		for j in junk:
-			pieces = removeAllOccurrences(pieces, j)
+		# Remove junk elements from the list
+		removeJunk(pieces)
 
-		# Remove internal double quotes from tweets.
+		# Remove internal double quotes from each tweet.
 		removeDoubleQuotes(pieces)
 
-		# Remove embedded links
-		link = "http"
-		removeElementsContaining(link, pieces)
+		# Remove embedded links from each tweet
+		links = ["http", "www"]
+		for link in links:
+			removeElementsContaining(link, pieces)
 
-		for p in pieces:
-			print p
+		# Remove @ handles
+		handle = "@"
+		removeElementsContaining(handle, pieces)
+
+		#for p in pieces:
+		#	print p
 
 	except Exception, e:
 		print "Exception: ", e
+
+def removeJunk(data):
+	# Remove junk elements from every tweet
+	junk = ["", ":", "\"text\"", "\"\\\"", "}]"]
+	for j in junk:
+		removeAllOccurrences(j, data)
 
 def removeElementsContaining(s, data):
 	"""
@@ -53,6 +62,7 @@ def removeElementsContaining(s, data):
 	for p in data:
 		contains = p.count(s) > 0
 		if contains:
+			print p
 			data.remove(p)
 
 
@@ -68,7 +78,7 @@ def removeDoubleQuotes(data):
 		if has_quotes:
 			data[i] = p[1:-1]
 		
-def removeAllOccurrences(data, s):
+def removeAllOccurrences(s, data):
 	"""
 	Purpose: 	Removes all occurrences of s from the passed list, data.
 	Precond: 	data = list
