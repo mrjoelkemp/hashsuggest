@@ -1,0 +1,521 @@
+Not a problem Looking forward to our chat at 2pm today See you at the office
+Hey Sasha the zindex of acegutter 1000 gt that of the child div of overlay 150 Bug in the picture
+Just found out about 
+Thanks man
+Thanks 
+Spring 2012 NYU Instructor Evaluation 47 out of 50 
+He wasnt angry again  Just a stack of boring exams this time 60 more to grade tomorrow
+51 exams 3 pages each done
+Grading exams reminds me of laundry horribly boring but a necessary evil
+Im attending a Meetup with New York Angels Education Meetup
+InMaps  I visualized my LinkedIn network
+Idea script that computes the set difference of your list of followers across different days This will tell you who unfollowed you
+An inability to solve a problem is a result of unfamiliarity or a fault in ones problem solving approach Perhaps only the latter
+Python makes Data Structure exploration fun Students shouldnt have to conquer C pointers to tinker with storage structures
+Any opinions on Polyas How to Solve it
+With knowledge of data structures algorithms and some ingenuity you can adapt to anything No one cares about all the tech youve used
+Hack n Jill Hackathon
+PyMongo it has begun
+Extending a Jquery Object would be ideal For now Ill settle for a class of static cohesive functions Refactor
+A pretty good night of work Id say
+My progress on HTML5 Video Puzzle in Coffeescript Snapping and group dragging are not perfect
+Definitely If it was more like 20 bucks Id pick up a license for sure
+Sublime Text 2 feels significantly better than Textmate ST2s code folding actually works
+It was taken care of in a few days for me That may have been a fluke It is ccny after all 
+Your address is probably still valid I managed to get in without being a student You have nothing to lose
+You can actually join the CCNYwide license
+I have Matlab for both and its the same either way Im totally biased with my love of Matlabs lang  env to hell with Octave
+Javascript is just one of those things that you have to master Coffeescript is giving me a dangerous veil of ignorance
+I had the whole Julio Iglesias thing going 
+Makes grading way more enjoyable
+totally intentional
+The 
+Ive made plans for TechCrunch Mini MeetUp NYC
+Im attending a Meetup with The New York Web Tech Scaling Group
+My homework Frequent Itemset Mining using Recursive Database Projection Watch out Amazon
+Head First MySQL and PHP is decent
+Homework shakes head WasteOfTime
+Paul yesterdays talk was amazingly insightful Thanks so much for taking the time to talk about Scala and Storm
+The learning opportunity for backend tech trumps that for me That worry should be had for any opportunity
+Join me at the upcoming Stack Overflow Worldwide Meetup Day SOMeetup
+Cool Internship over the summer in games or advertising as part of a fellowship program Dont know the company just yet
+Im attending a Meetup with How To Javascript HTMLCSS
+Great article on Founder Vesting Its great that someone mentioned 83b upon incorporation
+Hey dude hows the job hunt going Any leads with companies that interest you
+I refuse to use it As with all of their products theyll just use the content to enhance their targeting algorithms
+Wish it was more useful Glad you got something out of it
+Cant wait via
+Didnt know about it Thanks a ton for sharing
+Every aspect of Jquerys API should have a demo because their documentation is absolutely laughable
+Looks like its extremely simple to see whats in local storage So much for that idea
+Im attending a Meetup with NYCrb
+Well said
+The directionalsnap is probably easier to sift through since its shorter The jigsaw is a bit more verbose but should be clean
+Thanks for the ACM talk last Friday Your 5founder story hits really close to home Thanks a ton for all of the advice
+Just wanted to say thanks for coming by the ACM talk last Friday You inspire my inner hacker Thanks for all of the advice
+See any ways to improve the readability of my code Id love the honest feedback
+Jquery directional snapping
+Dont you just love null references triggered by a missing  in Jquery object creation
+Coders dont go outside because our monitors then need max brightness Blame laptop batteries
+Sure thing Btw thanks for coming out to the ACM talk last night The advice was invaluable
+Must read on backend storage cc
+Cool man I hope to catch you around this summer to learn about your past internship experience and get some advice
+Oh I thought you were going to be a fellow I meant space like advertising social games etc Were you a fellow previously
+Awesome Im excited for the program as well Which space did you choose Social Photos
+I was looking at OMGPOP too right before Zyngas acquisition I dont know if theyre staying as a separate entity though
+Which companies are you looking at for tomorrow
+Jquerys drag event doesnt fire quick enough to detect perpixel dragging Things just got interesting
+Anyone have experience with Jquery draggable events for simultaneous dragging of multiple objects
+Bought a CodeKit license Yay
+By context switching I mean stopping my train of thought to write a commit message after the completion of a small task
+Ive given up on trying to avoid more than 1 task in a single commit the context switching is annoying
+When in doubt look to Underscorejs
+Shadow  
+Congrats on the TechCrunch feature Great job
+Damn the Panda Video Heroku addon is really good Integrates beautifully with Rails and has a UI to easily upload to S3 in various codecs
+Jquery draggables snap modes are terribly generic Directionalsidespecific snap would save me a huge headache
+The crunch is that bad Sleep till Sunday 
+For sure Well said
+The tradeoff to clean code is a significantly larger callstack
+Thats so sexy Coffeescript  Underscorejs
+Its amazing to see so many insanely talented instructors within the Comp Sci dept at NYU Im very lucky to be a part of the team
+Please put the country field below the State and Zip in your checkout forms Its incredibly annoying as is and nonstandard
+Is it possible to iterate through two lists at the same time in Underscorejs
+Coffeescript  Underscore Get Object Key from Value
+App idea input a query and get the aggregated top 2 Google search results from every permutation of the words in the query
+Underscorejs  Coffeescript brings a smile to my face
+Interesting Are you changing Scaffold to TDD or is the launch deadline too tight
+Hey dude what are you reading to get your bearings with TDD The Rspec book wasnt that great
+Reading 
+Euclidean distance calculator within a wordpress post
+Segfaults are masked with 
+Instagrams architecture
+Call me spoiled but after all of these years Im starting to hate the tedium of C programming
+Getting nothing for 300 impressions makes 5 cents for an actual click feel like a slap in the face CPC is broken
+Modeling HTML5 Video Jigsaw Puzzle as a graph and set theory problem with an eye on performance The world is not ready
+When your frontend dev reworks the DOM you shouldnt have to modify your JS Stop hardcoding div ids when using Jquery
+Html5 Canvas drawImage with 9 parameters is ultrauseful but totally unintuitive A boundingbox abstraction is necessary
+Thats pretty funny The web is magic indeed 
+If youre building a side project in Javascript for the love of god please stop polluting the global namespace Coffeescript gt Javascript
+Achievement Unlocked Kona via
+Twitter usesused Apache Pig
+Im blown away by Pig for querying about a Hadoop setup Any chance of getting someone to do hadoop basics  pig for hackdays
+Im attending a Meetup with Hackdays studentonly coding  hacking newbies welcome
+Coffeescript is not Python Must stop usingrange
+I agree about the quality As a sole developer theres too much to build That tool would cut corners in the interim Thanks
+Hey Tal do you happen to know of any graphic design tools like Photoshop that allow you to export an asset as CSS3 code Thanks
+Makes me think about Anonylink A product with privacy as the priority has the potential to be viral even if its subpar
+But the results suck Im all for the nontracking though
+There are 11 Google Products on my Android phone Most if not all of them are not removable
+What motivates me to write is having to click through 5 to 10 sites just to piece together an answer
+Bitbuckets free 5user private repo plan is too good to pass up
+I go through IDE after IDE looking for the perfect one despite knowing the answers Vim or Emacs
+Im attending a Meetup with Hackdays studentonly coding  hacking newbies welcome
+Im attending a Meetup with DemoDays  student codedesign demos for students
+Im attending a Meetup with Hackdays studentonly coding  hacking newbies welcome
+Im attending a MongoDB 101 Meetup with Hackdays studentonly coding  hacking newbies welcome
+Let the transformation begin TDD
+Theres nothing better than nailing a deadline First draft of the redesign is up on Unlockable
+Soo sexy Finding the seed pages for TrustRank ntrustvalues  1 if rank in seedranks else 0 for rank in pageranks
+Check out 
+Note to self Read the effing documentation next time ProTip HackNY
+Youd think a runtime error could be better than a generic 
+It was great meeting you earlier Hope youre building something awesome
+Im building something awesome The machine cant handle the awesomeness 
+In Las Vegas casinos theres not a clock to be found ProTip HackNY
+My macbook cant handle my hack its heaving for mercy HackNY
+Hacking in style at the spring hackathon HackNY
+Super excited to get hacking HackNY
+If I refactor and extend horribly written code can I claim it as my own
+Hey Lee thanks again for the talk today I wish it was a 4hr talk split between Rspec and Cucumber
+Work from only one machine with Git otherwise prepare for conflicts protip
+Use the package name too ie utilsObject for the 
+Test my friends new online app 6 lucky testers will win a 10 Starbucks gift card so check it out
+Check it out and feel free to share Unlockable
+Herokusan where were you a month ago
+Coffeescript makes Javascript dev way more exciting
+There are two types of programmers those who view coding as a job and those who view it as a means of changing the world
+Redis and Split for Rails Oh my
+Theres still time to register for the Spring Hackathon Whos coming with me
+Every small company deserves customer feedback to improve Tell your hotdog coffee and breakfast vendors what they can do better
+The rumors are true Modernizr solved world peace
+If its not one browser its the nextsigh HTML5video
+Ill be honest I dont see whats the big deal with Techstars latest batch Niche products are safer bets it seems
+Building product is fun and rewarding but not challenging enough
+Hmm Heroku doesnt play well with Barista
+Arrgh CSS and JS conflicts with Rails 3 Asset pipeline Easy fixes but its a doubleedge sword
+Object scope in JS sucks but Coffee has a class construct that feels better Plus Coffee cleans up JS syntax by leaps and bounds
+Coffeescript you beautiful beast Makes this native code fanboy me feel more at home 
+Sleepy but code wont write itself
+Integrate with Spotlight and allow us to type an artists name and start playback
+Ugandan children abducted and forced to murder This needs to stop KONY2012
+Whos coming to the Spring HackNY hackathon with me
+Zynga Jukebox makes it soooo easy HTML5audio
+Just picked one of these up to help end domestic abuse DoGood via
+A  B  0  N seems convenient as a double initialization until you realize A and B refer to the same list Python
+I just joined NYC Backbone
+Instructors use algebra like a magic trick When its done youre impressed but have  no clue what they just did
+Pythons list slicing syntax exists in Matlab MissMyMatlab
+My Hunter College teacher rating 661 out of 70  validation that material should be brought to the students Teachers need to teach
+Its been great for Git integration split pane coding and CSSSASS highlighting But its buggy and tries to do too much
+Note to self dont open developmentlog in Aptana if you want to avoid OutOfMemory crashes Rails
+Aptana a hyphen within span text in a HAML view is not an attempt at something special BrokenIDE
+So 
+Were trying to fill that void
+Imagine 50 students asking for readreceipts for a single assignment
+Enhanced sound quality should be available to Spotify Unlimited users that dont care about the mobile offering
+You wont make your millions watching television
+Offer 50GB of free space and here comes the stampede no wonder theyre down Boxcom
+Teaching Python 32 and coding in Python 27 Yep print  print is getting me every time
+Note to self always set the containers minwidth to avoid div collapse
+I should really just use SASS scoping feature Oy
+Any recommendations on how and when to test Books articles or otherwise I need to learn more about TDD and such Thanks
+Hey Swift I really enjoyed your talk on Backbone a few weeks ago Can you suggest some additional reading material Thanks
+Im attending a Meetup with Hackdays studentonly coding  hacking newbies welcome So excited for this one
+There are some programmer nicknames that just become an insult over time lol
+Im about to part with 5month solely not to hear that horrible 
+What are you working on that uses Clojure
+Kill me the next time I have to style a Jquery UI element
+Id go airbnb for something affordable However it may be too short of a notice for the renters
+Hell yeah Crunch mode ON 
+An Agile talk would be fantastic Thanks
+How about a talk on effective ways of working with or managing tech teammates This applies to hackathons and future projects
+Yeah man thats beautiful Thanks again
+The spatial arrangement of the styles in the CSS The nested stacked styles approach is cleaner than the alternative
+Your coursekit CSS example was the first time I saw visually stacked styles Its really clean now thats all I do Thanks
+Startup culture feels good  3HrsSleep
+Check out 
+Which year do you have and what is the RAM spec Im looking to buy an Air so Im curious
+Id prefer it use the button tag to mesh with my nonhaml markup and styling button usage isnt well documented either
+HAMLs button support resorts back to form input elements Oye
+Never auto width an inline div Itll pop into place and create this noticeable readjustment
+Styling a Jquery UI dialog is painful
+Youtubes experience has varied so many times in a single evening it feels like Im a part of 5 different split tests
+Its amazing how internet privacy can be totally given up for the lure of usable software
+Teaching Python C and PHP coding in Javascript and Ruby Headache
+This is why I absolutely love game dev It forces you to revisit all of the math you thought was a waste of time
+Vote NO on cloture and protect NY Tech jobs the internet and the future of a 21st century NY nytmSOS
+Always have your stuff when you need it with 2GB account is free
+Git feels like a step in the wrong direction However its integration in deployment platforms is a great leap in productivity
+Heroku is definitely going to make a killing pure Amazon EC2 deployment is like pulling teeth
+Helvetica Neue where have you been all of my life
+Statistics beats Mathematics for the worst taught subject in this country
+Im going to a Meetup with NYC Data Business Meetup
+Its easier to learn objC than to get running using xcode 4
+404 Smoketests are the new Rickrolls
+Attending the Speeding up Applications Webinar
+More power to you man
+Its absolutely insane how many moving pieces there are in web development
+Who will be the first to get epeppersprayed OccupySOPA
+Is there no twitter extension that 
+We each build a small scale app Well talk details later
+The only laymen explanation of Backpropagation Neural Networks that Ive seen so far
+you have all of this space and yet you choose to add more junk to the focus of your app the playlist area
+I just bought this awesome shirt from that changes a life Go check them out via
+u270c u270c Help restore war abducted children with this cause tee  hoodie u270c u270c via
+Why would NCurses use yx instead of the normal xy coordinate system Now I have to reverse it in an abstraction
+Semester wont end until 1227 Lots of programming and studying left  Busiest semester for me by far
+I do online lessons btw Pygame would be so much easier C rendering engines use pointers so it requires programming knowhow
+Otherwise Im currently using C and NCurses for terminalbased game dev Theres a lot of background info necessary to start
+If heshe wants a more formal education on getting started I teach game dev and details can be worked out Forward my email
+C game dev its been way too long 
+No one seems to be able to successfully teach its principles and applications Head First Statistics is a good intro
+Building Pong for UNIX terminals using NCurses Still wrapping my head around how primitive it is
+The time it takes to write is wasteful Instructors need to be conscious of pacing but the extra time can be spent on discussions
+Hopefully it has some sort of export for web setting Looks good so far though Thanks for sharing
+GIMP for Mac is painful to use
+Anyone else enjoy the advertisement music Brilliant idea for making ads bearable
+Fatcow logins go to 500 error page sigh
+Adding the compose and back buttons to the tabbar would be cramped so its justified on iOS Android has a hardware back button
+This assumes that youre rooted to get access to the APKs on the device
+Look at the first screenshot Notice the two top bars
+You can target a larger segment of people by making the class cheaper and use it to market the app 20tix makes it ultraniche
+How about promoted replies That serves as a sort of ranking for the flood of tweets sent to popular users
+Screen real estate is sacred especially on a mobile device Why waste it with a useless action bar on the home screen TwitterAndroid
+Is there a new change besides the UI overhaul a few weeks ago I use to clean up the horrible redesign
+1500 lines of code and I couldnt be more bored Useless and tedious grad school assignments Ugh
+Not a loop in sight you sexy beast
+You code in matlab bro
+I cant help but play with Paths plus button nav and wonder how the hell they did that on Android Totally impressive and inspiring UI
+A system built on Matlab cell matrices is held together with scotch tape
+Kick me in the face the next time I decide to do a 3person project by myself
+Web hosting for 38year You get what you pay for FatCow
+Working on my RDBMS project like a good student Falling deeper in love with Matlab
+Android Handlerbased communication system architecture
+My baby is all grown up and on her own Final version of NYC Find a Fountain released
+Parsing with
+Never  Its supposed to be a simple app not worth the time to port Once I switch api input streams Im moving on from it
+Switching Find a Fountain data source from my restful server to NYC Socratas API Too bad their JSON causes OutOfMemory issues Android
+Who in google readers android team thinks its cool to change frequently used menu button locations and not say anything Usability man
+hosting is really terrible If my site gets more than a dozen requests in a short period the web server stalls Not renewing
+Matlab Structure Fake Constructor
+Github for Mac is absolutely gorgeous compared to the Windows git solution
+The Android SDK has a fantastic logging system very similar to what that article was describing
+strcmp for CStrings returns 0 boolean false when true Oye CSucks
+Im going to this Meetup
+Checking that out soon Thanks
+Not recently Maybe when all of my projects for this semester are done Hows MW3
+Busy like hell bro Nonstop work and classes around here Whats the latest
+I think your ambitions already align with the books ideas the stories should help further strengthen your beliefs Check it out
+Really enjoying 
+Check out this documentary on typography
+Protest at Union Square I have delicious tikka masala in my belly Im not bothered  thanks for lunch
+Right there with you Those of us flying solo to the fundraiser should team up
+USB Filters in OSX VirtualBox are ruining my day To get a USB device to work in a virtual OS you have to hack the OSX VirtualBox client
+Just finished 
+So youd like to start blocking desktop apps
+Why a desktop client Which feature requires all of that work
+Blocking should not block
+How about an interface change where pressing enter submits the URL to be blocked  avoiding the button press
+Loving Newsblur after only a few minutes Will definitely consider a subscription Thanks
+Check out 
+Awesome Thanks Jessica See you there Best of luck on the runway
+That discount code seems to be expired 
+Reeder for Chrome is free and its such a huge improvement to Google Reader
+My reading list
+Google Web Fonts where have you been all of my life
+Your talk at NYUESS on validating ideas was truly one of the most helpful talks Ive heard to date Thanks for sharing
+Ahhh minimalism
+I can now choose to Follow people that Im already following Interesting FixTwitter
+At least you have chairs lol Im right there with you
+Mentions should be ranked for highprofile accounts Meaningful replies from followers are lumped with junk
+It wont be a personalized 1on1 lesson but should make lessons more attractive for those with limited budgets
+Why not offer 2person group lessons at 25hourperson which is a net gain and observe the games for mistakes from both players
+MBA students that cant spell lol
+Why is the new googlewide design aesthetic wasting the top 14 of the page with excess padding
+Im better looking than a fractal but I cant seem to change my photo How did the other hackers upload a photo
+Wednesday
+Is the Nov NYTM going to be recorded at the new venue Just curious for those who cant make the odd schedule
+Thanks man We should definitely meet up Keep me posted
+Very soon Finishing up the enroute masters this or next term Cant wait
+I so badly want to prototype this app idea but next weeks two midterms and project somehow make me feel guilty Solution quit school 
+Finishing up 
+TaskRabbit is leagues ahead of Zaarly in UX alone
+Disappointed in Nestio All it does is take me to craigslist and other partners where it has prefilled the search box and hit 
+Whats the argument against doing 
+A former student of mine made a free android app Check out Pirate Radio on the Android Market
+Its amazing how pizza shops can neglect analytics service and innovation in flavor or process yet still survive based on location
+Where is this months Foundation You cant do this to me 
+Went to his talk on corporate finance Unfortunately he mostly makes it QA hopefully this talk will be more accessible
+I just signed up for u201cPlanting the Seed How to Raise Your Firu2026u201d only 23 spots left via
+Become an angel investor
+There is no hope for you friend 
+Definitely Does your current android phone support HSPA
+Only Verizon users should complain about the lack of the iPhone 5 ya know on a network where the device is actually usable
+Sure I had some wine tonight but Jeff Bezos is taking 5 minutes to get out a single sentence Wtf Amazon
+What kind of plans  Are you working on a webservice that youre planning on hosting Details
+Netflixs stock is at 112 from a 300 high earlier this month Anyone else chucking their savings account at this bad boy Netflix
+Thats a lot of speed for casual web browsing You hosting a datacenter from your apartment or what lol
+A 3 minute video takes 70 minutes to upload to Youtube Thanks Time Warner Cable
+Whos coming with me Should be fun Check out the New York foursquare API community
+Come with me to this Meetup for East Village Techies
+I just signed up for u201cDefensive finance what startup foundersu2026u201d only 10 spots left via
+Google invite here
+Group tutoring sessions for computer programming start this Saturday Check out for more details
+Launching a private tutoring service in computer programming Please spread the word Details can be found at
+Check out Find a Fountain on the Android Market
+Just released version 10 of my Find a Fountain android app Feedback welcome
+Check out the class u201cBeginning C for the NonProgrammeru201d via
+Im going to a Meetup with NY Tech Meetup
+Ah the sweet signs of progress android coding
+I nominate for a Shorty Award in gaming because hes one dedicated dude
+Props to matlabs regionprops Its like the developers knew it would deserve respect
+Polish is no joke There are no patterns in the language only flukes
+But if I didnt want the information and pictures available I shouldnt have put them up to begin with Thanks web 20 privacy holes
+Took off my profile picture thanks to creepy services that crawl the web for everything phone  addy pics etc related to your name
+Love this
+Satiated
+Gimme that DLC braada Christmas is just too far away
+Hi my name is America OnLine AOL yes Im still alive No I dont know how LOL
+Nope Just somehow misspelling 
+Got my race number for the Eighth Annual Race as One 4M for lung cancer So excited
+Homework assignments should complement a lecture not supplement  you lazy tenured bastards
+I stopped because it was pointless Though pointless I find myself back on it
+The field of mathematical logic seems to be simply a mastery of manipulation adding air to air  convincingly
+Put multitouch on the Nexus One and Ill consider it
+We are at the mercy of mitochondria
+Why is it impossible to find the proper negation of a word Is it unpliant nonpliant impliant or depliant
+Reading up on the human brain its a fascinating means of computation
+Shovelers shovel with no sense for snows sojourn in the sky
+Resolution get my first scientific publication in 2010 No exceptions
+Im really digging the prose was that original
+My breakfast makes me think of Shakespeare
+RIP James 
+I cant get these neurons out of my head
+Avatar was awesome
+You can run you can run tell my friend Willie Brown
+They still make American Pie movies Talk about hardcore milking of an original hit
+This holiday relaxation time is a bit overrated it just makes me check fbook and twitter more often
+Holy F I got a 40 GPA this term D
+RT Most compelling part of Avatar The man next to me at the urinal who pulled his pants and boxers down to his knees
+Frangelico Hazelnut Liqueur Oh yeah
+LOL Youve got me pinned bro
+lol Btw thanks for the notes on your final 
+Word of advice when emailing your instructor or professor be courteous and formal especially when asking for a favor
+Just picked it up as a Christmas gift for my sister Thanks for the link
+Gas pains 1  Me 0
+Just in time for the holidays lol Microsoft planned it all
+Hendrix running through my fingers
+Right on brotha Although Kim Kardashian would be a nice addition to the track record
+If you stay indoors you wont catch the flu anyways lol
+I am further amazed at how lovely things work out in logic Predicate abstraction in varying domain K using term equality lovely 
+Poor Infinity Ward their patch for the Javelin Glitch in MW2 made a huge glitchexploit in matchmaking The game is literally broken Lol
+So that was the Reach trailer Expected something more than oversized mesh models walking around Bungie seems to hype things too much
+Adept  At Least Give My Dreams Back You Negligent Whore nowPlaying
+Amen braada
+Anything Ronco is a treat 
+If Britney Spears released a new album Id be all over it Not implying that Id actually listen to it
+Use the fbook text message feature to update your status unless that bombs for you too If so suicide might be an option Lmao Jk
+Today I was inspired by an eraser Some things can never be removed
+Balls to that Take it like a man lol
+Latest H1N1 Update Who gives a f
+Gotta love that Bully Beatdown
+3 frozen margaritas Cant go wrong with that
+One should never take for granted  thirty chairs eager begging for knowledge
+Google will name your first born in2010
+What a waste of a perfectly good night
+Saw a man talking to himself on the train everyone else thought he was crazy I just thought he was unlucky blame RNA transcription
+A more complete catalog of matches and POVs from each event
+Bam Margera wrote a book That dude cant even read LOL
+1000 Ways to Die has to be the worst show on television Snakes shooting guns to kill people WTF Not to mention the horrible CG work
+Award shows for video games always looks like a joke I guess the geeks deserve an outing
+Like children when creating software you must be prepared to devote your life to its existence
+Why is it that a wallfull of my posts on Facebook looks depressing but a wallfull of my posts on Twitter looks engaging
+If youre not following John Mayer johncmayer then youre missing out on some comedy
+Its good stuff if it had a purpose lol 
+Hot damn braaa Who did you sleep with for the sandbox preview lol
+No I sent you an invite to the preview Didnt know you had it already lol
+You get my Google Wave invite braaa
+Give that shit back to GameStop and get the Xbox version Youll be a happier man trust me
+Why would you get COD MW2 for PS3 Dont you know that the highlight of COD is the multiplayer The campaign is unreal though
+Twitter will allow people to start charging followers to see tweets I dont know of anyone who has the balls to use such a dumb service
+Unfortunately
+Cant sleep
+Sony save your PS3 ad money it wont help you
+Its been a looooong night in New York City
+Sat through a dissertation defense the presentation sucked But seeing famous logicians debate and challenge the speaker was admirable
+Breakups on a Tuesday make Monday seem a bit better which is difficult of course
+I may or may not be in Long Island with family until Sunday hasnt been confirmed yet
+You all should know that Tuesdays blow
+Creating Turing Machines
+WTF does Sundance know about the game industry He has no affiliation with the social gaming scene MLG
+Oh Internet Explorer I forgot about ya The only time you see daylight is when I accidentally misclick around the taskbar
+Looking forward to Thanksgiving weekend
+Make a ghettogirl into a cheerleader MTV How about making her civilized first
+She smashedahomie
+JBobby status lol
+Opera Mini 5 beta has a horrible inline editor Press backspace once and it will continue to wipe everything youve written
+I think of some cool things but twitters character limit wont let me share most of them with the world errr 17 people
+Im a vampire but when I go into the light something terrible happens my face sparkles LOL NewMoon
+Of course not my pizza place has an e in it Lol
+Dominoes breadbowl pasta is delicious
+I had Vista Home Premium but I guess you tried to get more out of it Windows 7 is a nice improvement though
+Vista was good man turn off User Access Control and its smooth I dont understand what everyone complained about
+I impersonate this person known as Joel Kemp twitter should verify this account
+Now that Chrome is getting extensions like firefox I might be sold
+Is it just me or is the Chrome browser pretty damn fast
+Boy if I could sing like John Mayer Id need to invest in a better acoustic guitar and some spiked stick to beat off the ladies
+Chrome OS nice idea for the computer illiterates
+Gotta love the Yeah Yeah Yeahs
+This week is way too hectic
+Modern Warfare 2 has the best singleplayer experience Ive ever played
+Meditating on the OSI Model
+Its always good to be busy braada Ive been really busy as well I will try to make time to give you a call soon
+Unreal Engine 3 is free for students and hobbyists
+Whats up braada Long time no hear Looks like someone abandoned his Xbox for the PS3 Cant say Im proud Lol
+Sorry Beyonce I really dont care what you have to say I just want to see your boobs lol
+Really digging the firefox beta
+Got a perfect score on the teacher feedback today Yea boy
+Got a haircut finally No more Super Mario curls hmm now Im a bit sad lol
+Categorizing the incomputable
+Now a Windows 7 user what was all the hype for Im not really blown away Good thing it only cost me 30 bucks
+Where in Astoria were you partying
+Moving to Astoria
+Alphabeta pruning a few things
+Tic Tac Toe 
+I hate Godel Numbering now just as much as I did a year ago
+Grading grading and a little bit more grading
+4550 braada dont worry
+Damn my life damn it to hell Grading midterms Enough said
+My pen keeps staring at me begging to be used
+Rough lecture Im convinced that I cant teach trivial material
+Dont stalk me cuz Im beautiful lol
+I really hope Bank of Americas ATM doesnt eat my check
+Hey
+Thanks I dont think I have the culinary skills to pull of that demonstration though lol
+Ah thanks for the link I noticed the 13 shipping fee for a dvd though glad theres the download option I just might pick it up
+At least so I claim
+The field of law is an extension of mathematical logic
+Glad to hear about the job best of luck Im staying in the Bronx found a really classy building in a decent neighborhood Rare
+Thanks man Whats this about a new job
+Moving out this weekend thank goodness this week is an easy one
+Thats damn cheap for a terabyte
+Laundry blows so hard
+Hello  How are ya
+Im assuming that youre older than me 23 Theres no way you have a teacher younger than that lol
+Gotta start my reading on 2D Hidden Markov Models
+Its tiring to switch between being a teacher and student
+Spent the weekend watching MLG Dallas loserstatus 
+Yes teaching starts today 
+My ship formation implementation has resulted in bloated and buggy code time for a revision
+Im also thinking that I should implement an XML parser to read shape definitions from a file that way I can add new shapes later on XNA
+Ok so now I need to create a way to abstract shapesformations so that theyre easier to manage Create classes much XNA
+Dude whats the latest on the iphone dev
+Ugh revised the entire player movement system about a 
+Finished mocking up the players response to gestures captured by my recognizer XNA
+Too much Halo 3 rots the soul
+LOL I was the guy calling Glad to see hes not home
+The components arent clean enough for me to want to share the code with anyone else Might post it on my site in the future
+Ive finished a rudimentary sprite animation implementation I need to clean it up later making it easily reusable for all game sprites
+Sounds like an interesting problem Good luck
+Instead of trying to implement these vital but complicated components on my own I should just look at existing solutions and get ideas
+Onwards to implementing sprite animation
+ Initial working prototype of my XNA project It contains the working gesture recognizer and the visuals of a 
+Enjoying a nice long weekend with the family
+Think of the 2nd xbox 360 as a startup cost not as a LAN party waiting to happen
+Unfortunately twitters word limit wont allow me to properly explain The boxes and spheres are used in collision detection
+Instead of implementing a bounding boxs semicomplicated transformation with a sprites rotation I decided to use a bounding sphere
+Heading to the office to finish this damn gesture recognizer Ive spent too much time on it
+Awesome tip Thanks
+Is it because of the abstracted draw procedure where we no longer have control of the draw order
+Apparently when Xbox 360 controller thumbsticks get worn out they have problems giving precise diagonal and centered input oh joy
+I was always trained to encapsulate members but getterssetters are a pain in the ass Proper coding practices are out the window D
+So the recognizer works for the controller input just need to limit the sampling rate to make things perfect
+Finished a prototype of my gesture recognizer in XNA using the xbox 360 contoller The recognizer is scale and rotation invariant ftw
+NYC is good good weather finally Enjoying the summer with friends food and some travel Cali not treating you well eh
+Nice Sounds like were both making progress The sprite class is a necessary abstraction cleans up the prototype code for sure
+No idea these things take a long time Im using a scrumlike workflow though progress each day keeps abandonment away 
+Successfully implemented my own Sprite class for XNA It inherits from the DrawableGameComponent class and cleans up my code Beautiful 
+But I thought things were going well What happened
+Ive already taken on three jobs for the fall web developer teaching three courses and researcher Should I teach an online course too
+On the LIRR Heading home
+Ronkonkoma bound
+Needs a large coffee and some cool breeze
+Its a beautiful summer Just have to squeeze in more time for work
+GMGMQ isnt General Motors though named as such its some offshoot stock that was tradehalted and is now worth absolutely nothing
+Say no to Petrone
+Ah completed image quantization with Python Nothing much but its a great start
+Do you play COD4
+All about the cheesecake
+Ahh Opera Mini on my bberry Finally happy
+Im sick of waking up late waiting for assigned work
+My coffee is burning my esophagus that cant be a good sign
+I remember those days
+Suppose there is a qualifier
+New poetry at
+Sounds like youre being bled man good luck with the rough day
+Wow thats a hardcore session You sound like one of those MLG pros now logging 810 hrs a day lol
+Dreaming of definitions
+Today is another day at the office
+Thats a crapload of examinations Good luck to you though you seem like a pro
+Find the min and max numbers between N distinct numbers with at most 3N2 comparisons and do it on a huge exam with no pressure whatsoever
+Eeesh how does your exam work
+Qualifying exam preparation is consuming my soul
+Not yet still on my local repository CSS will always be painstaking Im making tradeoffs as a result Well see how it goes
+Redesigning mrjoelkempcom Finally
+So um even direct msgs are limited to a certain number of chars Good thing Im a minimalist 
+doing laundry cant party without a single pair of underwear
+I have studied logic to the point of now being illogical
+Thanks Procrastination is my lady I treat her well
+At the office pulling a 12 hour Computer Network study session It would be productive if it wasnt the day before the final 
+Wondering why I signed up for this thing

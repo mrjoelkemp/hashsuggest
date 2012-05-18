@@ -1,20 +1,23 @@
 # Author: 	Joel Kemp
 # Purpose: 	This file contains the code necessary to convert the 
 #			pulled JSON twitter feeds into usable text files with one tweet per line
+# Notes: 	THis code is sloppy because it's pretty much throw-away
 
 import simplejson
 import re
 import string
 
 def main():
-	# Open the json text file
-	file = open("data/joel.json")
-
-	# The json file is encoded as a single string
-	for line in file:
-		data = line
-
+	
 	try:
+
+		# Open the json text file
+		file = open("data/joel.json")
+
+		# The json file is encoded as a single string
+		for line in file:
+			data = line
+
 		# Regex elements
 		re1='.*?'	# Non-greedy match on filler
 		re2='("text")'	# Double Quote String 1
@@ -52,9 +55,12 @@ def main():
 		removeAllOccurrences("\\", pieces)
 		removeAllOccurrences("", pieces)
 
+		# Write the tweets to file
+		file = open("data/tweets.txt", "w")
 		for p in pieces:
-			print p
-
+			file.write(p + "\n")
+		print "Done writing tweets to file."
+		
 	except Exception, e:
 		print "Exception: ", e
 
