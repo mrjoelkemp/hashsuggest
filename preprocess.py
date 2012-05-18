@@ -59,7 +59,11 @@ def stem(data):
 	"""
 	stems = []
 	for w in data:
-		stems.append(stem(w))		
+		print w
+		s = stem(w)
+		print stem
+		input()
+		stems.append(s)		
 	return stems
 
 def main():
@@ -78,12 +82,17 @@ def main():
 
 		file_write = open("data/tweetsprocessedashton.txt", "w")
 		for tokens in tweets:
+			print tokens
+			
 			# Remove stop words from the list of tokens
 			removeStopWords(tokens)
+			#print "Stop word removal: ", tokens
 			
 			# Remove the stems
 			tokens = stem(tokens)
-
+			print "Stemmed: ", tokens
+			input()
+			
 			# Convert the token list to a string representation
 			token_string = "".join(tokens)
 
