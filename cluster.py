@@ -6,18 +6,43 @@ from features import computeTF_DT
 class Cluster:
 	# Init the object
 	def __init__(self, data):
+		if len(data) == 0: 
+			raise Exception("ILLEGAL: empty cluster")
+	
 		self.tweets = data	# store a list of tweets
-		self.centroid = ''	# identify one of the tweets as centroid
-		self.tf = []		# term frequency
-		self.dt = ''		# dominant term
+		self.centroid = data	# identify one of the tweets as centroid; initially it's just one tweet
+		self.tf, self.dt = computeTF_DT(self.tweets)	# term frequency, dominant term		
 		
 	# Printing out the data
 	def __repr__(self):
-		print 'Cluster %s: %s' % (self.dt, len(self.tweets))
+		print "Cluster '%s': %s tweets" % (self.dt, len(self.tweets))
 		for t in self.tweets:
-			print t
-			
+			if t == self.centroid:
+				print "***\t%s" % t
+			else:	
+				print "\t%s" % t
 		return ''
-		
-	def update(self):
+	
+	# Update the cluster with new membership and return the deviation of centroid
+	def update(self, data):
+		# Save the old centroid and recompute TF_DT
+		old_centroid = self.centroid
+		self.tweets = data
 		self.tf, self.dt = computeTF_DT(self.tweets)
+		self.centroid = self.calculateCentroid()
+		return tweet_distance(old_centroid, self.centroid)
+		
+	# Calculate centroid of the tweets set, that is picking one of the tweets as centroid
+	def calculateCentroid(self):
+		t_dist = []
+		for t in self.tweets:
+			t_dist.append(tweet_distance(t, self.centroid))
+		
+		# Computing average distance of all the tweet_distance
+		avgDist = round(float(sum(t_dist))/len(self.tweets))
+		
+		# Find the minimum difference in distance and returning that tweet
+		closest_dist = [abs(x-avgDist) for x in t_dist]
+		min_index, min_val = min(enumerate(closest_dist), key=lambda x:x[1])
+		
+		return self.tweets[min_index]

@@ -3,10 +3,13 @@
 from sets import Set
 
 # Twitter Distance
-def tweet_distance(tw1, tw2):
+def tweet_distance(tw1s, tw2s):
 	# Author: 	Joel Kemp
-	# Precond: 	tw1, tw2 are strings
+	# Modified by: Wai Khoo
+	# Precond: 	tw1s, tw2s are strings
 	# Returns: 	an integer count of similar words
+	tw1 = tokenise(tw1s)
+	tw2 = tokenise(tw2s)
 	count = 0
 	for word in tw1:
 		if word in tw2:
