@@ -79,7 +79,7 @@ def removeFromString(substring, s):
 	for word in s:
 		contains = word.count(substring) > 0
 		# Build a string of non-occurrences.
-		if not contains
+		if not contains:
 			result += word + " "
 	# Trim off the excess whitespace
 	result = string.rstrip(result)
