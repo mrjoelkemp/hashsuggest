@@ -46,7 +46,7 @@ def load_stop_words():
 	stop_words = []
 	for line in file:
 		line = line.rstrip()
-		stop_words.append(line.lower())
+		stop_words.append(line)
 	file.close()
 	return stop_words
 
@@ -57,10 +57,7 @@ def stem(data):
 	"""
 	stems = []
 	for w in data:
-		print w
 		s = stem(w)
-		print stem
-		input()
 		stems.append(s)		
 	return stems
 
