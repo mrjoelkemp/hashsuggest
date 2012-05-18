@@ -60,7 +60,6 @@ def removeStems(data):
 	Returns:	A list containing a stem for each word in the words list
 	"""
 	stemList = []
-	print "removeStems: Data=", data
 	for d in data:
 		stemList.append(stem(d))
 	return stemList
@@ -87,7 +86,6 @@ def main():
 			
 			# Remove the stems
 			stems = removeStems(stopped)
-			print "Stemmed: ", stems
 			
 			# Convert the token list to a string representation
 			token_string = ""
@@ -95,13 +93,16 @@ def main():
 				token_string += s + " "
 			token_string = token_string.rstrip()
 			
-			print "TokenString: ", token_string
-			input()
+			# Prevent blanks
+			if token_string == "":
+				continue 
+
 			# Store the processed tweets in a new file
 			file_write.write(token_string + "\n")
 
 		file_write.close()
-	
+		print "Done creating preprocessed tweet file."
+
 	except Exception, e:
 		print "Error:", e
 
