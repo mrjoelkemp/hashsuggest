@@ -12,7 +12,7 @@ def main():
 	try:
 
 		# Open the json text file
-		file = open("data/joel.json")
+		file = open("data/ashton.json")
 
 		# The json file is encoded as a single string
 		for line in file:
@@ -56,11 +56,11 @@ def main():
 		removeAllOccurrences("", pieces)
 
 		# Write the tweets to file
-		file = open("data/tweets.txt", "w")
+		file = open("data/tweetsashton.txt", "w")
 		for p in pieces:
 			file.write(p + "\n")
 		print "Done writing tweets to file."
-		
+
 	except Exception, e:
 		print "Exception: ", e
 
