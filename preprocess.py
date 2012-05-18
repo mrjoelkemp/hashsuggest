@@ -7,27 +7,35 @@ from stemming.porter2 import stem	# Stemming algorithm
 def removeStopWords(data):
 	"""
 	Purpose: 	Removes instances of stop words from the passed list, data
+	Precond: 	Data is a list of strings
 	Notes: 		Inplace modification of data
 				Stop words loaded from a textfile in the data/ directory.
 	"""
-	try:
-		file = open("data/stopwords.txt")
-		
-		stop_words = []
-		
-		for line in file:
-			stop_words.append(line)
-		
-		file.close()
+	try:	
+		stop_words = load_stop_words()
 
-		# If there's only a single string
-		if(len(stop_words) == 1)
-			# Our stop words are a list of the string's tokens
-			stop_words = stop_words[0].split()
+		
 
 
 	except Exception, e:
 		print "removeStopWords:", e
+
+def load_stop_words():
+	"""
+	Purpose:	Loads the stop words from file.
+	Notes: 		The file is currently hardcoded.
+	Returns:	A list of strings where each string is a stop word.
+	"""
+	file = open("data/stopwords.txt")
+	stop_words = []
+	for line in file:
+		stop_words.append(line)
+	file.close()
+	# If there's only a single string
+	if(len(stop_words) == 1)
+		# Our stop words are a list of the string's tokens
+		stop_words = stop_words[0].split()
+	return stop_words
 
 def stem(data):
 	"""
