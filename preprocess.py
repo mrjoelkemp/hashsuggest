@@ -3,7 +3,20 @@
 # Purpose: 	A collection of functions that strip unnecessary characters from tweets.
 # Notes:	Tweet preprocessing is done offline, so this doesn't have to be a module.
 from stemming.porter2 import stem	# Stemming algorithm
-from twitter import removeAllOccurrences
+
+def removeAllOccurrences(s, data):
+	"""
+	Purpose: 	Removes all occurrences of s from the passed list, data.
+	Precond: 	data = list
+				s 	 = string
+	Notes: 		Inplace modification of list
+	"""
+	while True:
+		num_instances = data.count(s)
+		finished = num_instances == 0
+		if finished:
+			break
+		data.remove(s)
 
 def removeStopWords(data):
 	"""
@@ -14,11 +27,11 @@ def removeStopWords(data):
 	"""
 	try:	
 		stop_words = load_stop_words()
+		
 		for sw in stop_words:
-			if not sw in data:
-				continue
-			# Remove all occurrences of that stop word
-			removeAllOccurrences(sw, data)
+			if sw in data:
+				# Remove all occurrences of that stop word
+				removeAllOccurrences(sw, data)
 
 	except Exception, e:
 		print "removeStopWords:", e
@@ -34,10 +47,9 @@ def load_stop_words():
 	for line in file:
 		stop_words.append(line)
 	file.close()
-	# If there's only a single string
-	if(len(stop_words) == 1):
-		# Our stop words are a list of the string's tokens
-		stop_words = stop_words[0].split()
+	
+	# Our stop words are a list of the string's tokens
+	stop_words = stop_words[0].split(",")
 	return stop_words
 
 def stem(data):
@@ -46,25 +58,29 @@ def stem(data):
 	Returns:	A list containing a stem for each word in the words list
 	"""
 	stems = []
-	for w in words:
+	for w in data:
 		stems.append(stem(w))		
 	return stems
-
 
 def main():
 	try:
 		# Open the tweet file
 		file = open("data/tweetsashton.txt")
-		file_write = open("data/tweetsprocessedashton.txt", "w")
-
-		# For each tweet, 
+		
+		# Grab all of the tweets from file.
+		tweets = []
 		for tweet in file:
 			# split the tweet into tokens
 			tokens = tweet.split()
+			tweets.append(tokens)
 
+		file.close()
+
+		file_write = open("data/tweetsprocessedashton.txt", "w")
+		for tokens in tweets:
 			# Remove stop words from the list of tokens
 			removeStopWords(tokens)
-
+			
 			# Remove the stems
 			tokens = stem(tokens)
 
@@ -74,7 +90,6 @@ def main():
 			# Store the processed tweets in a new file
 			file_write.write(token_string + "\n")
 
-		file.close()
 		file_write.close()
 	
 	except Exception, e:
