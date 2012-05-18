@@ -36,14 +36,14 @@ def main():
 		# Remove embedded links from each tweet
 		links = ["http", "www"]
 		for link in links:
-			removeElementsContaining(link, pieces)
+			removeFromElements(link, pieces)
 
 		# Remove @ handles
 		handle = "@"
-		removeElementsContaining(handle, pieces)
+		removeFromElements(handle, pieces)
 
-		#for p in pieces:
-		#	print p
+		for p in pieces:
+			print p
 
 	except Exception, e:
 		print "Exception: ", e
@@ -54,17 +54,45 @@ def removeJunk(data):
 	for j in junk:
 		removeAllOccurrences(j, data)
 
-def removeElementsContaining(s, data):
+def removeFromElements(substring, data):
 	"""
-	Purpose: 	Removes elements from data containing s
-	Notes: 		Inplace modification of list
-	""" 
-	for p in data:
-		contains = p.count(s) > 0
+	Purpose: 	Strips the substring from the elements of data, if it exists
+	Notes:		Inplace modification of the list
+	"""
+	for i in range(len(data)):
+		elem = data[i]
+		contains = elem.count(substring)
 		if contains:
-			print p
-			data.remove(p)
+			removed = removeFromString(substring, elem)
+			data[i] = removed
 
+def removeFromString(substring, s):
+	"""
+	Purpose: 	Removes the word in the passed string, s, containing the passed substring
+	Notes: 		This is more general than removeExactSubstring() since 
+				we're removing the entire word, not just the matching chars
+	Returns: 	A new string with the contents of s minus the substring-contained words
+	"""
+	import string
+
+	result = ""
+	for word in s:
+		contains = word.count(substring) > 0
+		# Build a string of non-occurrences.
+		if not contains
+			result += word + " "
+	# Trim off the excess whitespace
+	result = string.rstrip(result)
+	return result
+
+def removeExactSubstring(substring, s):
+	"""
+	Purpose: 	Removes the substring from the string, s by replacing the substring by a space
+	Returns: 	The modified string
+	""" 
+	import string
+	result = string.replace(s, substring, "")
+	return result
 
 def removeDoubleQuotes(data):
 	"""
