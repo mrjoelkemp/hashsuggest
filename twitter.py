@@ -46,6 +46,10 @@ def main():
 		handle = "@"
 		removeFromElements(handle, pieces)
 
+		# Remove Retweets
+		retweet = "RT"
+		removeFromElements(retweet, pieces)
+
 		# Remove all punctuation
 		punctuation = list(string.punctuation)
 		punctuation.append("")
