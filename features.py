@@ -1,4 +1,6 @@
-# File Author: Wai Khoo
+# Author: 	Wai Khoo
+# File: 	features.py
+# Purpose: 	A collection of functions that aids clustering.
 
 from sets import Set
 

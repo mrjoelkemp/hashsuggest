@@ -1,7 +1,10 @@
-# Author: Wai Khoo
+# Author: 	Wai Khoo
+# File: 	cluster.py
+# Purpose: 	Definition of class Cluster
 
 from features import tweet_distance
 from features import computeTF_DT
+from features import tokenise
 
 class Cluster:
 	# Init the object
@@ -23,14 +26,14 @@ class Cluster:
 				print "\t%s" % t
 		return ''
 	
-	# Update the cluster with new membership and return the deviation of centroid
+	# Update the cluster with new membership and return the deviation of centroid (normalized)
 	def update(self, data):
 		# Save the old centroid and recompute TF_DT
 		old_centroid = self.centroid
 		self.tweets = data
 		self.tf, self.dt = computeTF_DT(self.tweets)
 		self.centroid = self.calculateCentroid()
-		return tweet_distance(old_centroid, self.centroid)
+		return float(tweet_distance(old_centroid, self.centroid)) / min(len(tokenise(old_centroid)), len(tokenise(self.centroid)))
 		
 	# Calculate centroid of the tweets set, that is picking one of the tweets as centroid
 	def calculateCentroid(self):
