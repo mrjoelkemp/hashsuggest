@@ -7,25 +7,33 @@ import cluster
 from features import tweet_distance
 
 # Kmeans
-def kmeans(tweets, k, cutoff):
+# tweets is a list of tweets
+# k is the number of clusters
+# maxRound is the maximum number of iteration
+# cutoff is a convergence threshold
+def kmeans(tweets, k, maxRound, cutoff):
 	init = random.sample(tweets, k) # randomly sample k tweets
-	clusters = [cluster.Cluster([t]) for t in init] # Use the init set as k separate clusters
+	clusters = [cluster.Cluster(t) for t in init] # Use the init set as k separate clusters
 	
-	while True:
+	round = 0
+	while round < maxRound:
+		print 'Round #%s\n' % round
 		lists = [ [] for c in clusters] # Create an empty list for each cluster
 		for t in tweets:
 			# Get the distance for t to the centroid of 1st cluster
-			small_dist = tweet_distance(t, clusters[0].centroid)
+			big_dist = tweet_distance(t, clusters[0].centroid)
 			idx = 0
-			for i in range(leng(clusters[1:])): # For all the other cluster
+			for i in range(len(clusters[1:])): # For all the other cluster
 				dist = tweet_distance(t, clusters[i+1].centroid)
-				if dist < small_dist:
-					small_dist = dist
+				
+				# Assign t to the appropriate cluster (i.e. with the most similarity)
+				if dist > big_dist:
+					big_dist = dist
 					idx = i + 1
 			
 			# Append t to the closest cluster
 			lists[idx].append(t)
-			
+
 		# Update the clusters
 		biggest_shift = 0.0
 		for i in range(len(clusters)):
@@ -35,5 +43,8 @@ def kmeans(tweets, k, cutoff):
 		# If the clusters aren't shifting much (i.e. twitter distance remain high), break and return the results
 		if biggest_shift > cutoff:
 			break
-	
+		
+		round = round + 1
+		
+	print "Done clustering...\n"
 	return clusters

@@ -20,11 +20,16 @@ def tweet_distance(tw1s, tw2s):
 	
 # Compute term frequency from tweets and extract dominant term
 def computeTF_DT(tweets):
+	# Tokenise the string into words
 	str_tweets = tokenise(joinString(tweets))
-	unique_tweets = Set((word for word in str_tweets))
 	
+	# Remove duplicates
+	unique_tweets = Set((word for word in str_tweets))
+
+	# Compute frequency for each word and creating a dictionary
 	tf = dict([(term, freq(term, str_tweets)) for term in unique_tweets])
 	
+	# Sort the term-frequency list in descending order and select the first item as dominant term
 	result = sorted(tf.items(), key=lambda x:x[1], reverse=True)
 	dt = result[0][0]
 	
@@ -37,14 +42,12 @@ def freq(word, sentence):
 # break string up into tokens
 def tokenise(string):
 	""" break string up into tokens """
-	string = string.replace(".", "")
-	string = string.replace(",", "")
 	string = string.replace("\s+", " ")
 	string = string.lower()
 	words = string.split(" ")
 	return [word for word in words]
 
-# Convert a list into a single string
+# Convert a list of tweets into a single string
 def joinString(list):
 	str_list = []
 	for tweet in list:

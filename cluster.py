@@ -11,8 +11,8 @@ class Cluster:
 	def __init__(self, data):
 		if len(data) == 0: 
 			raise Exception("ILLEGAL: empty cluster")
-	
-		self.tweets = data	# store a list of tweets
+		
+		self.tweets = [data]	# store a list of tweets
 		self.centroid = data	# identify one of the tweets as centroid; initially it's just one tweet
 		self.tf, self.dt = computeTF_DT(self.tweets)	# term frequency, dominant term		
 		
@@ -37,6 +37,11 @@ class Cluster:
 		
 	# Calculate centroid of the tweets set, that is picking one of the tweets as centroid
 	def calculateCentroid(self):
+		# If there's no tweets in the cluster, return
+		if len(self.tweets) == 0:
+			return ''
+	
+		# Generate a list of twitter_distance
 		t_dist = []
 		for t in self.tweets:
 			t_dist.append(tweet_distance(t, self.centroid))
@@ -47,5 +52,5 @@ class Cluster:
 		# Find the minimum difference in distance and returning that tweet
 		closest_dist = [abs(x-avgDist) for x in t_dist]
 		min_index, min_val = min(enumerate(closest_dist), key=lambda x:x[1])
-		
+
 		return self.tweets[min_index]
