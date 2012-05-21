@@ -11,7 +11,7 @@ from features import tweet_distance
 # k is the number of clusters
 # maxRound is the maximum number of iteration
 # cutoff is a convergence threshold
-def kmeans(tweets, k, maxRound, cutoff):
+def kmeans(tweets, k, maxRound = 20, cutoff = 0.8):
 	init = random.sample(tweets, k) # randomly sample k tweets
 	clusters = [cluster.Cluster(t) for t in init] # Use the init set as k separate clusters
 	
