@@ -12,7 +12,7 @@ def suggest_hashtag(tweet, source = "data/tweetsprocessedashton.txt", lut_source
 	#		get a suggested hashtag from a POST'd tweet?
 
 	# Grab a stem -> word mapping from the file
-	LUT = get_LUT(raw_tweets)
+	LUT = get_LUT(lut_source)
 
 	tweets = load_tweets(source)
 	num_training = len(tweets) // 3
@@ -33,7 +33,7 @@ def suggest_hashtag(tweet, source = "data/tweetsprocessedashton.txt", lut_source
 
 	# Get the original word (w/ stem)
 	hashtag = LUT[hashtag_stem]
-	
+
 	return hashtag
 
 def load_tweets(filename):
