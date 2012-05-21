@@ -134,6 +134,8 @@ def get_unique_words(filename):
 	try:
 		file = open(filename)
 		for tweet in file:
+			
+			tweet = tweet.lower()
 			word_list = tweet.split()
 			
 			# Remove the stop words
