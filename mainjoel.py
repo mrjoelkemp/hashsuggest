@@ -20,5 +20,22 @@ def main():
 	# 	print unique
 
 
+def rem():
+	# Remove all of the small words from tweetashton.txt
+	raw_tweets = "data/tweetsashton.txt"
 
-main()
+	file = open(raw_tweets)
+	output = open("data/tweetsashtonbig.txt", "w")
+
+	for tweet in file:
+		words = tweet.split()
+		words = removeSmallWords(words)
+		tweet_string = get_tweet_string(words)
+		
+		# Write to the second file.
+		output.write(tweet_string + "\n")
+
+	file.close()
+	output.close()
+
+rem()
