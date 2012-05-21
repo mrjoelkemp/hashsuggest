@@ -14,20 +14,45 @@ def main():
 	# Open the tweet file
 	file = open(processed_tweets)
 	tweets = []
+	
+
 	for t in file:
-		tweets.append(t.replace("\n", ""))
+		tweet = t.replace("\n", "")
+		# Avoid duplicates
+		if tweet in tweets:
+			continue
+		
+		tweets.append(tweet)
 
 	print "Num tweets: ", len(tweets)
 
 	# Training set
-	subtweets = random.sample(tweets, len(tweets) // 3)
+	num_training = len(tweets) // 3
+	print "Num Training Ideal: ", num_training
+	subtweets = random.sample(tweets, num_training)
 	print "Num training: ", len(subtweets)
 
 	# Testing set
-	testing = list(set(tweets) - set(subtweets))
+	#testing = diff(tweets, subtweets)
+	testing = [tweet for tweet in tweets if tweet not in subtweets]
 	print "Num testing: ", len(testing)
+	print "Sets diff: ", len(tweets) - (len(subtweets) + len(testing))
+
 
 	#clusters = segmentation.kmeans(subtweets, 5, 20, 0.8)
+
+def process_query(tweet):
+	"""
+	Purpose: 	Processes the passed in user-submitted tweet.
+	Precond: 	tweet is a user-submitted string
+	Returns: 	A preprocessed list of words from the passed tweet.
+	"""
+	# Break the tweet into a list
+	tweet_words = tweet.split()
+
+	# Preprocess: stop word and stem removal
+	tokens = preprocess(tweet_words)
+	return tokens
 
 
 def rem():
