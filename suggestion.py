@@ -8,6 +8,14 @@ import segmentation
 import random
 
 def suggest_hashtag(tweet, K = 5, source = "data/tweetsprocessedashton.txt", lut_source = "data/tweetsashton.txt"):
+	"""
+	Purpose: 	Entry point to the suggestion engine. 
+	Precond:	tweet = a raw tweet string from the user.
+				K = number of clusters.
+	Notes: 		Since the user can change the number of clusters, we need it to be adjustable.
+	Returns: 	The top hashtag suggestion.
+	TODO: 		Change to suggest the top M hashtags
+	"""
 	# TODO: Should this be the main function that's called to 
 	#		get a suggested hashtag from a POST'd tweet?
 
@@ -21,7 +29,7 @@ def suggest_hashtag(tweet, K = 5, source = "data/tweetsprocessedashton.txt", lut
 	testing = [tweet for tweet in tweets if tweet not in subtweets]
 	
 	# Perform k-means on the subtweets
-	clusters = segmentation.kmeans(training, 5, 20, 0.8)
+	clusters = segmentation.kmeans(training, K, 20, 0.8)
 
 	query_tokens = process_query(tweet)
 	# String representation of the processed tweet
