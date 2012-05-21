@@ -11,9 +11,10 @@ def main():
 	# Grab a stem -> word mapping from the file
 	LUT = get_LUT(raw_tweets)
 
-	for stem, word in LUT.items():
-		print stem, "->", word
+	#for stem, word in LUT.items():
+	#	print stem, "->", word
 
+	print "Num Pairings: ", len(list(LUT.keys()))
 
 	# uniques = get_unique_words(raw_tweets)
 	# for unique in uniques:
@@ -31,11 +32,11 @@ def rem():
 		words = tweet.split()
 		words = removeSmallWords(words)
 		tweet_string = get_tweet_string(words)
-		
+
 		# Write to the second file.
 		output.write(tweet_string + "\n")
 
 	file.close()
 	output.close()
 
-rem()
+main()
