@@ -5,7 +5,7 @@ from preprocess import *
 def main():
 	try:
 		# Open the tweet file
-		file = open("tweetsashton.txt")
+		file = open("data/tweetsashton.txt")
 		
 		# Grab all of the tweets from file.
 		tweets = []
@@ -17,7 +17,7 @@ def main():
 
 		file.close()
 
-		file_write = open("tweetsprocessedashtonbig.txt", "w")
+		file_write = open("data/tweetsprocessedashtonbig.txt", "w")
 		
 		for tokens in tweets:
 			# Remove stop words from the list of tokens
