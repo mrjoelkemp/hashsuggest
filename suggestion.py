@@ -7,7 +7,7 @@ from preprocess import *
 import segmentation
 import random
 
-def suggest_hashtag(tweet, source = "data/tweetsprocessedashton.txt", lut_source = "data/tweetsashton.txt"):
+def suggest_hashtag(tweet, K = 5, source = "data/tweetsprocessedashton.txt", lut_source = "data/tweetsashton.txt"):
 	# TODO: Should this be the main function that's called to 
 	#		get a suggested hashtag from a POST'd tweet?
 
@@ -37,6 +37,10 @@ def suggest_hashtag(tweet, source = "data/tweetsprocessedashton.txt", lut_source
 	return hashtag
 
 def load_tweets(filename):
+	"""
+	Purpose: 	Loads tweet strings from file and does minor processing
+	Returns: 	A list of strings where each element is a line from the file.
+	"""
 	# Open the tweet file
 	file = open(filename)
 	tweets = []
