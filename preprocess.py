@@ -4,6 +4,20 @@
 # Notes:	Tweet preprocessing is done offline, so this doesn't have to be a module.
 from stemming.porter2 import stem	# Stemming algorithm
 
+
+def preprocess(data):
+	"""
+	Purpose: 	Main helper to facilitate the removal of stop words and stems from the passed data.
+	Precond: 	data = list of strings
+	Returns: 	A list of preprocessed strings
+	"""
+	processed = list(data)
+	
+	processed = removeStopWords(processed)
+	processed = removeStems(processed)
+
+	return processed
+
 def removeAllOccurrences(s, data):
 	"""
 	Purpose: 	Removes all occurrences of s from the passed list, data.
@@ -85,6 +99,7 @@ def get_unique_words(filename):
 		file = open(filename)
 		for line in file:
 			word_list = line.split()
+
 
 	except Exception, e:
 		raise e
