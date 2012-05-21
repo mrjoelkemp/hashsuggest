@@ -82,11 +82,15 @@ def get_LUT(filename):
 	""" 
 	Purpose: 	Generates a lookup table with stem -> tweet_word mappings 
 				for each word in the file identified by the passed filname.
+	
 	Precond: 	filename = string filename of the file to be loaded and parsed.
+	
 	Returns: 	A dictionary of stem -> tweet_word mappings
+	
 	Usage: 		If you have a stem and want to retrieve an idea of the original tweet text, 
 				stems_words = get_LUT("tweets.txt")
 				stems_words["includ"] will yield "include"
+	
 	Notes: 		If the stem already exists, we want the smallest
 				word that generates that stem. 
 				If we don't do this, then we'll only get the last
