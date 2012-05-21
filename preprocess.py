@@ -80,5 +80,31 @@ def get_unique_words(filename):
 	Precond: 	filename = string filename of the file containing the words to be loaded
 	Returns: 	A list of unique strings.
 	"""
+	words = []
+	try:
+		file = open(filename)
+		for line in file:
+			word_list = line.split()
 
-	return
+	except Exception, e:
+		raise e
+
+	return words
+
+def get_tweet_string(data):
+	"""
+	Precond: 	data = a list of strings
+	Returns: 	A single string including the passed items 
+				from the passed list, data.
+	Format: 	Each datum is whitespace separated.
+	"""
+
+	# Convert the token list to a string representation
+	token_string = ""
+	
+	for s in data:
+		token_string += s + " "
+	
+	token_string = token_string.rstrip()
+	
+	return token_string

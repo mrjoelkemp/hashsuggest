@@ -18,6 +18,7 @@ def main():
 		file.close()
 
 		file_write = open("data/tweetsprocessedashton.txt", "w")
+		
 		for tokens in tweets:
 			# Remove stop words from the list of tokens
 			stopped = removeStopWords(tokens)
@@ -25,18 +26,15 @@ def main():
 			# Remove the stems
 			stems = removeStems(stopped)
 			
-			# Convert the token list to a string representation
-			token_string = ""
-			for s in stems:
-				token_string += s + " "
-			token_string = token_string.rstrip()
+			# Get a string representation of the list
+			tweet_string = get_tweet_string(stems)
 			
-			# Prevent blanks
-			if token_string == "":
+			# Prevent blanks from being stored
+			if tweet_string == "":
 				continue 
-
+			
 			# Store the processed tweets in a new file
-			file_write.write(token_string + "\n")
+			file_write.write(tweet_string + "\n")
 
 		file_write.close()
 		print "Done creating preprocessed tweet file."
