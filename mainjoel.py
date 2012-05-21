@@ -9,14 +9,15 @@ def main():
 	raw_tweets = "data/tweetsashton.txt"
 	
 	# Grab a stem -> word mapping from the file
-	#LUT = get_LUT(raw_tweets)
+	LUT = get_LUT(raw_tweets)
 
-	#for stem, word in LUT.items():
-	#	print stem, "->", word
+	for stem, word in LUT.items():
+		print stem, "->", word
 
-	uniques = get_unique_words(raw_tweets)
-	for unique in uniques:
-		print unique
+
+	# uniques = get_unique_words(raw_tweets)
+	# for unique in uniques:
+	# 	print unique
 
 
 

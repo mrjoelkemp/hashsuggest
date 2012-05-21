@@ -68,6 +68,15 @@ def load_stop_words():
 	file.close()
 	return stop_words
 
+def removeSmallWords(data, threshold = 4):
+	""" 
+	Purpose: 	Removes strings from data that have fewer characters than the threshold.
+	Precond: 	data = list of strings
+	Returns: 	A list with the words of data greater than or equal to the threshold.
+	"""
+	big_words = [word for word in data if len(word) >= threshold]
+	return big_words
+
 def removeStems(data):
 	"""
 	Purpose: 	Computes the stem of each word in the passed word list
@@ -134,7 +143,7 @@ def get_unique_words(filename):
 	try:
 		file = open(filename)
 		for tweet in file:
-			
+
 			tweet = tweet.lower()
 			word_list = tweet.split()
 			

@@ -23,8 +23,11 @@ def main():
 			# Remove stop words from the list of tokens
 			stopped = removeStopWords(tokens)
 			
+			# Remove all words smaller than the threshold
+			big_words = removeSmallWords(stopped, 4)
+
 			# Remove the stems
-			stems = removeStems(stopped)
+			stems = removeStems(big_words)
 			
 			# Get a string representation of the list
 			tweet_string = get_tweet_string(stems)
