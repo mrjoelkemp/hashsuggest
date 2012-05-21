@@ -63,3 +63,22 @@ def removeStems(data):
 	for d in data:
 		stemList.append(stem(d))
 	return stemList
+
+def get_LUT(filename):
+	""" 
+	Purpose: 	Generates a lookup table with word -> processed_word mappings 
+				for each word in the file identified by the passed filname.
+	Precond: 	filename = string filename of the file to be loaded and parsed.
+	Returns: 	A dictionary of word -> processed_word mappings
+	"""
+	return 
+
+def get_unique_words(filename):
+	"""
+	Purpose: 	Generates a list of unique (non-repeating) words from the 
+				file identified by the passed filename.
+	Precond: 	filename = string filename of the file containing the words to be loaded
+	Returns: 	A list of unique strings.
+	"""
+
+	return
