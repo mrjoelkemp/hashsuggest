@@ -12,7 +12,7 @@ def preprocess(data):
 	Returns: 	A list of preprocessed strings
 	"""
 	processed = list(data)
-	
+
 	processed = removeStopWords(processed)
 	processed = removeStems(processed)
 
@@ -80,12 +80,26 @@ def removeStems(data):
 
 def get_LUT(filename):
 	""" 
-	Purpose: 	Generates a lookup table with word -> processed_word mappings 
+	Purpose: 	Generates a lookup table with stem -> tweet_word mappings 
 				for each word in the file identified by the passed filname.
 	Precond: 	filename = string filename of the file to be loaded and parsed.
-	Returns: 	A dictionary of word -> processed_word mappings
+	Returns: 	A dictionary of stem -> tweet_word mappings
+	Usage: 		If you have a stem and want to retrieve an idea of the original tweet text, 
+				stems_words = get_LUT("tweets.txt")
+				stems_words["includ"] will yield "include"
+	Notes: 		Since multiple endings can map to the same stem, you can only
+				retrieve a possible word that was used to generate the stem.
 	"""
-	return 
+	stems_words = {}
+
+	# Generate the unique list of words from the file
+	unique_words = get_unique_words(filename)
+
+	# Get the stems of each word
+	stems = removeStems(unique_words)
+
+
+	return words_stems
 
 def get_unique_words(filename):
 	"""
@@ -97,9 +111,21 @@ def get_unique_words(filename):
 	words = []
 	try:
 		file = open(filename)
-		for line in file:
-			word_list = line.split()
+		for tweet in file:
+			word_list = tweet.split()
+			
+			# Remove the stop words
+			stopped = removeStopWords(word_list)
 
+			for word in stopped:
+				# If the word is already in the list, then move on
+				if word in words:
+					continue
+				
+				# Otherwise, add the unique word to the list of words
+				words.append(word)
+
+		file.close()
 
 	except Exception, e:
 		raise e
