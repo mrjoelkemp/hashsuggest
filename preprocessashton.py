@@ -44,3 +44,5 @@ def main():
 
 	except Exception, e:
 		print "Error:", e
+
+main()
