@@ -29,38 +29,23 @@ def main():
 
 	# Training set
 	num_training = len(tweets) // 3
-	#print "Num Training Ideal: ", num_training
 	subtweets = random.sample(tweets, num_training)
-	#print "Num training: ", len(subtweets)
-
+	
 	# Testing set
-	#testing = diff(tweets, subtweets)
 	testing = [tweet for tweet in tweets if tweet not in subtweets]
-	#print "Num testing: ", len(testing)
-	#print "Sets diff: ", len(tweets) - (len(subtweets) + len(testing))
-
+	
 	# Perform k-means on the subtweets
 	clusters = segmentation.kmeans(subtweets, 5, 20, 0.8)
 
+	#########
 	## DEBUG: Sample querying
+	#########
 	query = "I want to save the world by rescuing Uganda and all of its children with my ex-wife Demi."
 	
 	query_tokens = process_query(tweet)
+	# String representation of the processed tweet
+	query_string = get_tweet_string(query_tokens)
 
-	
-def process_query(tweet):
-	"""
-	Purpose: 	Processes the passed in user-submitted tweet.
-	Precond: 	tweet is a user-submitted string
-	Returns: 	A preprocessed list of words from the passed tweet.
-	"""
-	tweet = tweet.lower()
-	# Break the tweet into a list
-	tweet_words = tweet.split()
-
-	# Preprocess: stop word and stem removal
-	tokens = preprocess(tweet_words)
-	return tokens
 
 
 def rem():
