@@ -110,10 +110,10 @@ def get_LUT(filename):
 	stems_uniques = zip(stems, unique_words)
 
 	for stem, word in stems_uniques:
-		exists = stem in stems_words
-
 		smallest_word = word
-		if exists:
+		# If the stem is already in the mapping
+		# Grab the smallest word that generates that stem
+		if stem in stems_words:
 			current_word = stems_words[stem]
 			current_is_smaller = len(current_word) < len(word)
 			if current_is_smaller:
