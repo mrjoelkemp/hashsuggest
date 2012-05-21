@@ -87,8 +87,12 @@ def get_LUT(filename):
 	Usage: 		If you have a stem and want to retrieve an idea of the original tweet text, 
 				stems_words = get_LUT("tweets.txt")
 				stems_words["includ"] will yield "include"
-	Notes: 		Since multiple endings can map to the same stem, you can only
-				retrieve a possible word that was used to generate the stem.
+	Notes: 		If the stem already exists, we want the smallest
+				word that generates that stem. 
+				If we don't do this, then we'll only get the last
+				word that generated the stem.
+				The smallest word is closer to the root of the word;
+				this should be more helpful.
 	"""
 	stems_words = {}
 
@@ -97,9 +101,23 @@ def get_LUT(filename):
 
 	# Get the stems of each word
 	stems = removeStems(unique_words)
+	
+	# Join the lists into tuples
+	stems_uniques = zip(stems, unique_words)
 
+	for stem, word in stems_uniques:
+		exists = stem in stems_words
 
-	return words_stems
+		smallest_word = word
+		if exists:
+			current_word = stems_words[stem]
+			current_is_smaller = len(current_word) < len(word)
+			if current_is_smaller:
+				smallest_word = current_word
+
+		stems_words[stem] = smallest_word 
+
+	return stems_words
 
 def get_unique_words(filename):
 	"""
