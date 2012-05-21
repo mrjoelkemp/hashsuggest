@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Twitter HashTag Suggestion Engine</title>
+</head>
+<body>
+<form action="/cgi-bin/main.py" method="post">
+
+<center>
+<h2>Authors</h2>
+	Joel Kemp and Wai Khoo
+<br>
+<h2>Project</h2>
+Web Information Retrieval and Data Mining; CUNY GC, Spring 2012
+<br>
+<h2>Description</h2>
+This system is an experiment to suggest hashtags for a user's current tweet. The system pulls the backlog of tweets for the current user and performs a data-mining analysis of those tweets to suggest appropriate, dominant terms/categories (i.e., hashtags).
+
+<br><br><br><br>
+<a href="data/tweetsashton.txt">Sample tweets from Ashton Kutcher</a>
+<br><br>
+<table border="0">
+	<tr>
+		<td align="right">Number of clusters:</td>
+		<td><input type="text" name="K"></td>
+	</tr>
+	<tr>
+		<td align="right">Threshold (0-1):</td>
+		<td><input type="text" name="Thres"></td>
+	</tr>
+	<tr>
+		<td align="right">Number of Iteration:</td>
+		<td><input type="text" name="Iter"></td>
+	</tr>
+	<tr>
+		<td align="right">Query Tweet:</td>
+		<td><input type="text" name="Tweet"></td>
+	</tr>
+</table>
+<br>
+<input type="submit" value="Enter"/>
+</center>
+</form>
+</body>
+</html>
