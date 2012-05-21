@@ -1,8 +1,8 @@
+#! c:/Python27/python
+
 # Author(s): 	Wai Khoo and Joel Kemp
 # File: 		main.py
 # Purpose: 		Entry point to our program
-
-#! c:/Python27/python
 
 import cgi, cgitb
 import sys
@@ -28,9 +28,11 @@ def main():
 	subtweets = random.sample(tweets, len(tweets)/2) # Use half of the dataset for training
 	clusters = segmentation.kmeans(subtweets, k, iteration, (1.0 - cutoff)) # Since our notion of cutoff is reversed, we do (1.0 - cutoff)
 	
+	# Print some results out
 	print '<br>'
 	for i in range(len(clusters)):
 		print "Cluster '%s': %s tweets<br>" % (clusters[i].dt, len(clusters[i].tweets))
+		print "&nbsp;&nbsp;&nbsp;&nbsp;Centroid: %s<br><br>" % clusters[i].centroid
 
 print "Content-type:text/html\r\n\r\n"
 print '<html>'
