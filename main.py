@@ -31,8 +31,8 @@ def main():
 	
 	# Perform k-means on the training set
 	clusters = segmentation.kmeans(training, k, iteration, (1.0 - cutoff))
-	for i in range(len(clusters)):
-		print "len: %s, dt:%s" % (len(clusters[i].tweets), clusters[i].dt)
+	#for i in range(len(clusters)):
+	#	print "len: %s, dt:%s" % (len(clusters[i].tweets), clusters[i].dt)
 
 	# Grab a stem -> word mapping from the file
 	lut_source = "data/tweetsashton.txt"
