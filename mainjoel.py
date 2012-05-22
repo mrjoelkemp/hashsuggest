@@ -22,10 +22,13 @@ def main():
 	for i in range(len(clusters)):
 		print "len: %s, dt:%s" % (len(clusters[i].tweets), clusters[i].dt)
 
+	# Grab a stem -> word mapping from the file
+	lut_source = "data/tweetsashton.txt"
+	LUT = get_LUT(lut_source)
+
 	for tweet in testing:
-		hashtag = suggest_hashtag(tweet, clusters)
-		print "Query Tweet: ", query
-		print "Suggested hashtag: #" + hashtag
+		hashtag = suggest_hashtag(tweet, clusters, LUT)
+		print "Query Tweet: ", tweet, "#" + hashtag
 
 
 def rem():

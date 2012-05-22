@@ -8,7 +8,7 @@ import segmentation
 import random
 import cluster
 
-def suggest_hashtag(tweet, clusters, lut_source = "data/tweetsashton.txt"):
+def suggest_hashtag(tweet, clusters, LUT):
 	"""
 	Purpose: 	Entry point to the suggestion engine. 
 	Precond:	tweet = a raw tweet string from the user.
@@ -25,10 +25,10 @@ def suggest_hashtag(tweet, clusters, lut_source = "data/tweetsashton.txt"):
 	closest = get_query_cluster(processed_tweet, clusters)
 	# Hashtag is the dominant term of the closest cluster
 	hashtag_stem = closest.dt
-
+	if hashtag_stem == "": 
+		return ""
+		
 	# Get the original word (w/ stem)
-	# Grab a stem -> word mapping from the file
-	LUT = get_LUT(lut_source)
 	hashtag = LUT[hashtag_stem]
 
 	return hashtag
