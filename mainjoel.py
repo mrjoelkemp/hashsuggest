@@ -9,7 +9,8 @@ def main():
 	#########
 	query = "I want to save the world by rescuing Uganda and all of its children with my ex-wife Demi."
 	
-	hashtag = suggest_hashtag(query)
+	num_clusters = 15
+	hashtag = suggest_hashtag(query, num_clusters)
 
 	print hashtag
 

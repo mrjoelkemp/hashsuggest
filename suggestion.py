@@ -6,6 +6,7 @@ from features import *
 from preprocess import *
 import segmentation
 import random
+import cluster
 
 def suggest_hashtag(tweet, K = 5, source = "data/tweetsprocessedashton.txt", lut_source = "data/tweetsashton.txt"):
 	"""
@@ -14,7 +15,7 @@ def suggest_hashtag(tweet, K = 5, source = "data/tweetsprocessedashton.txt", lut
 				K = number of clusters.
 	Notes: 		Since the user can change the number of clusters, we need it to be adjustable.
 	Returns: 	The top hashtag suggestion.
-	TODO: 		Change to suggest the top M hashtags
+	TODO: 		Change to suggest the top M hashtag_stem
 	"""
 	# TODO: Should this be the main function that's called to 
 	#		get a suggested hashtag from a POST'd tweet?
@@ -26,10 +27,12 @@ def suggest_hashtag(tweet, K = 5, source = "data/tweetsprocessedashton.txt", lut
 	num_training = len(tweets) // 3
 	# System training and testing tweets
 	training = random.sample(tweets, num_training)
-	testing = [tweet for tweet in tweets if tweet not in subtweets]
+	testing = [tweet for tweet in tweets if tweet not in training]
 	
 	# Perform k-means on the subtweets
 	clusters = segmentation.kmeans(training, K, 20, 0.8)
+	#for i in range(len(clusters)):
+	#	print "len: %s, dt:%s" % (len(clusters[i].tweets), clusters[i].dt)
 
 	query_tokens = process_query(tweet)
 	# String representation of the processed tweet
@@ -79,7 +82,7 @@ def get_query_cluster(processed_tweet, clusters):
 	for i in range(len(clusters)):
 
 		# Grab the centroid tweet
-		centroid_tweet = cluster[i].centroid
+		centroid_tweet = clusters[i].centroid
 
 		# Compute the tweet distance
 		distance = tweet_distance(centroid_tweet, processed_tweet)
@@ -87,6 +90,6 @@ def get_query_cluster(processed_tweet, clusters):
 		# If it's out first comparison
 		if smallest_distance == None or distance < smallest_distance:
 			smallest_distance = distance
-			closest_cluster = cluster[i]
+			closest_cluster = clusters[i]
 
 	return closest_cluster
