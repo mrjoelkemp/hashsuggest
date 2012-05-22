@@ -12,13 +12,13 @@ from features import tokenise
 # k is the number of clusters
 # maxRound is the maximum number of iteration
 # cutoff is a convergence threshold
-def kmeans(tweets, k, maxRound, cutoff):
+def kmeans(tweets, k, maxRound = 20, cutoff = 0.8):
 	init = random.sample(tweets, k) # randomly sample k tweets
 	clusters = [cluster.Cluster(t) for t in init] # Use the init set as k separate clusters
 	
 	round = 0
 	while round < maxRound:
-		print 'Round #%s<br>' % round
+		#print 'Round #%s<br>' % round
 		lists = [ [] for c in clusters] # Create an empty list for each cluster
 		for t in tweets:
 			# Get the distance for t to the centroid of 1st cluster
@@ -51,5 +51,9 @@ def kmeans(tweets, k, maxRound, cutoff):
 		
 		round = round + 1
 		
+<<<<<<< HEAD
 	print "Done clustering...<br>"	
+=======
+	#print "Done clustering...<br>"
+>>>>>>> 2f074e73481fc282f96ee5c838b749ab8c15b1bf
 	return clusters

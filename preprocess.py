@@ -18,6 +18,20 @@ def preprocess(data):
 
 	return processed
 
+def process_query(tweet):
+	"""
+	Purpose: 	Processes the passed in user-submitted tweet.
+	Precond: 	tweet is a user-submitted string
+	Returns: 	A preprocessed list of words from the passed tweet.
+	"""
+	tweet = tweet.lower()
+	# Break the tweet into a list
+	tweet_words = tweet.split()
+
+	# Preprocess: stop word and stem removal
+	tokens = preprocess(tweet_words)
+	return tokens
+
 def removeAllOccurrences(s, data):
 	"""
 	Purpose: 	Removes all occurrences of s from the passed list, data.

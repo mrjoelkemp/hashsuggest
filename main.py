@@ -6,8 +6,9 @@
 
 import cgi, cgitb
 import sys
-import segmentation 
+from suggestion import *
 import random
+import segmentation
 
 sys.stderr = sys.stdout
 
@@ -19,20 +20,46 @@ def main():
 	iteration = int(form.getvalue('Iter')) # number of iteration
 	queryTweet = form.getvalue('Tweet') # Query tweet
 	
-	# Open the tweet file
-	file = open("data/tweetsprocessedashton.txt")
-	tweets = []
-	for t in file:
-		tweets.append(t.replace("\n", ""))
-		
-	subtweets = random.sample(tweets, len(tweets)/2) # Use half of the dataset for training
-	clusters = segmentation.kmeans(subtweets, k, iteration, (1.0 - cutoff)) # Since our notion of cutoff is reversed, we do (1.0 - cutoff)
+	source = "data/tweetsprocessedashton.txt"
+	tweets = load_tweets(source)
 	
-	# Print some results out
-	print '<br>'
-	for i in range(len(clusters)):
-		print "Cluster '%s': %s tweets<br>" % (clusters[i].dt, len(clusters[i].tweets))
-		print "&nbsp;&nbsp;&nbsp;&nbsp;Centroid: %s<br><br>" % clusters[i].centroid
+	# Training set is 2/3 the number of tweets
+	num_training = (2 * len(tweets)) // 3
+	# System training and testing tweets
+	training = random.sample(tweets, num_training)
+	testing = [tweet for tweet in tweets if tweet not in training]
+	
+	# Perform k-means on the training set
+	clusters = segmentation.kmeans(training, k, iteration, (1.0 - cutoff))
+	#for i in range(len(clusters)):
+	#	print "len: %s, dt:%s" % (len(clusters[i].tweets), clusters[i].dt)
+
+	# Grab a stem -> word mapping from the file
+	lut_source = "data/tweetsashton.txt"
+	LUT = get_LUT(lut_source)
+
+	# Get the raw, unprocessed tweets
+	raw_tweets = load_tweets(lut_source)
+	#TODO: Print raw tweets for testing set instead of the processed testing
+	raw_testing = []
+	
+	# for each raw tweet:
+		# Process it to get the lsit
+
+		# Convert the list to a string
+
+		# If the string is in the training, then continue
+
+		# Otherwise, store the string in the raw_testing
+
+	#for tweet in raw_testing:
+	#	hashtag = suggest_hashtag(tweet, clusters, LUT)
+	#	print tweet, "#" + hashtag
+	hashtag = suggest_hashtag(queryTweet, clusters, LUT)
+	print "<h2> Suggested Hashtag Output: </h2>"
+	print queryTweet, "<b style='font-size: 18px'>#" + hashtag + "</b>"
+	print "<p>Suggested hashtag: #" + hashtag + "<p>"
+
 
 print "Content-type:text/html\r\n\r\n"
 print '<html>'
