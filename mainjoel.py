@@ -1,6 +1,8 @@
 # Author: 	Joel Kemp
 # Purpose: 	Driver program
 from suggestion import *
+import random
+import segmentation
 
 def main():
 	

@@ -4,8 +4,6 @@
 
 from features import *
 from preprocess import *
-import segmentation
-import random
 import cluster
 
 def suggest_hashtag(tweet, clusters, LUT):
@@ -27,7 +25,7 @@ def suggest_hashtag(tweet, clusters, LUT):
 	hashtag_stem = closest.dt
 	if hashtag_stem == "": 
 		return ""
-		
+
 	# Get the original word (w/ stem)
 	hashtag = LUT[hashtag_stem]
 
