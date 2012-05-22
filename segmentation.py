@@ -5,6 +5,7 @@
 import random
 import cluster
 from features import tweet_distance
+from features import tokenise
 
 # Kmeans
 # tweets is a list of tweets
@@ -21,10 +22,14 @@ def kmeans(tweets, k, maxRound, cutoff):
 		lists = [ [] for c in clusters] # Create an empty list for each cluster
 		for t in tweets:
 			# Get the distance for t to the centroid of 1st cluster
-			big_dist = tweet_distance(t, clusters[0].centroid)
+			#big_dist = tweet_distance(t, clusters[0].centroid)
+			#big_dist = clusters[0].computeMaxNormalizedDist(t)
+			big_dist = clusters[0].computeMaxNormalizedDist2(t, cutoff)
 			idx = 0
 			for i in range(len(clusters[1:])): # For all the other cluster
-				dist = tweet_distance(t, clusters[i+1].centroid)
+				#dist = tweet_distance(t, clusters[i+1].centroid)
+				#dist = clusters[i+1].computeMaxNormalizedDist(t)
+				dist = clusters[i+1].computeMaxNormalizedDist2(t, cutoff)
 				
 				# Assign t to the appropriate cluster (i.e. with the most similarity)
 				if dist > big_dist:
@@ -46,5 +51,5 @@ def kmeans(tweets, k, maxRound, cutoff):
 		
 		round = round + 1
 		
-	print "Done clustering...<br>"
+	print "Done clustering...<br>"	
 	return clusters

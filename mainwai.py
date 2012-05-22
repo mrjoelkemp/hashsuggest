@@ -16,10 +16,10 @@ def main():
 		tweets.append(t.replace("\n", ""))
 
 	subtweets = random.sample(tweets, len(tweets)/3)
-	clusters = segmentation.kmeans(subtweets, 5, 20, 0.8)
+	clusters = segmentation.kmeans(subtweets, 5, 20, 0.5)
 
 	for i in range(len(clusters)):
 		print "len: %s, dt:%s" % (len(clusters[i].tweets), clusters[i].dt)
 	
-	print clusters[4]
+#	print clusters[4].tf
 main()
