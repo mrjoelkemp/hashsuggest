@@ -38,13 +38,29 @@ def main():
 	lut_source = "data/tweetsashton.txt"
 	LUT = get_LUT(lut_source)
 
-	#for tweet in testing:
+	# Get the raw, unprocessed tweets
+	raw_tweets = load_tweets(lut_source)
+	#TODO: Print raw tweets for testing set instead of the processed testing
+	raw_testing = []
+	
+	# for each raw tweet:
+		# Process it to get the lsit
+
+		# Convert the list to a string
+
+		# If the string is in the training, then continue
+
+		# Otherwise, store the string in the raw_testing
+
+	#for tweet in raw_testing:
 	#	hashtag = suggest_hashtag(tweet, clusters, LUT)
 	#	print tweet, "#" + hashtag
 	hashtag = suggest_hashtag(queryTweet, clusters, LUT)
 	print "<h2> Suggested Hashtag Output: </h2>"
 	print queryTweet, "<b style='font-size: 18px'>#" + hashtag + "</b>"
 	print "<p>Suggested hashtag: #" + hashtag + "<p>"
+
+
 print "Content-type:text/html\r\n\r\n"
 print '<html>'
 print '<head>'
