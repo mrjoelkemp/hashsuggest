@@ -17,7 +17,7 @@ def main():
 	testing = [tweet for tweet in tweets if tweet not in training]
 	
 	# Perform k-means on the training set
-	K = 10
+	K = 50
 	clusters = segmentation.kmeans(training, K, 20, 0.8)
 	for i in range(len(clusters)):
 		print "len: %s, dt:%s" % (len(clusters[i].tweets), clusters[i].dt)
@@ -28,7 +28,7 @@ def main():
 
 	for tweet in testing:
 		hashtag = suggest_hashtag(tweet, clusters, LUT)
-		print "Query Tweet: ", tweet, "#" + hashtag
+		print tweet, "#" + hashtag
 
 
 def rem():
