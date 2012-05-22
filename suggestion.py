@@ -8,7 +8,7 @@ import segmentation
 import random
 import cluster
 
-def suggest_hashtag(tweet, K = 5, source = "data/tweetsprocessedashton.txt", lut_source = "data/tweetsashton.txt"):
+def suggest_hashtag(tweet, clusters, lut_source = "data/tweetsashton.txt"):
 	"""
 	Purpose: 	Entry point to the suggestion engine. 
 	Precond:	tweet = a raw tweet string from the user.
@@ -17,22 +17,6 @@ def suggest_hashtag(tweet, K = 5, source = "data/tweetsprocessedashton.txt", lut
 	Returns: 	The top hashtag suggestion.
 	TODO: 		Change to suggest the top M hashtag_stem
 	"""
-	# TODO: Should this be the main function that's called to 
-	#		get a suggested hashtag from a POST'd tweet?
-
-	# Grab a stem -> word mapping from the file
-	LUT = get_LUT(lut_source)
-
-	tweets = load_tweets(source)
-	num_training = len(tweets) // 3
-	# System training and testing tweets
-	training = random.sample(tweets, num_training)
-	testing = [tweet for tweet in tweets if tweet not in training]
-	
-	# Perform k-means on the subtweets
-	clusters = segmentation.kmeans(training, K, 20, 0.8)
-	#for i in range(len(clusters)):
-	#	print "len: %s, dt:%s" % (len(clusters[i].tweets), clusters[i].dt)
 
 	query_tokens = process_query(tweet)
 	# String representation of the processed tweet
@@ -43,6 +27,8 @@ def suggest_hashtag(tweet, K = 5, source = "data/tweetsprocessedashton.txt", lut
 	hashtag_stem = closest.dt
 
 	# Get the original word (w/ stem)
+	# Grab a stem -> word mapping from the file
+	LUT = get_LUT(lut_source)
 	hashtag = LUT[hashtag_stem]
 
 	return hashtag
