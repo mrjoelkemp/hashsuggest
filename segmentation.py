@@ -17,7 +17,7 @@ def kmeans(tweets, k, maxRound = 20, cutoff = 0.8):
 	
 	round = 0
 	while round < maxRound:
-		print 'Round #%s<br>' % round
+		#print 'Round #%s<br>' % round
 		lists = [ [] for c in clusters] # Create an empty list for each cluster
 		for t in tweets:
 			# Get the distance for t to the centroid of 1st cluster
@@ -46,5 +46,5 @@ def kmeans(tweets, k, maxRound = 20, cutoff = 0.8):
 		
 		round = round + 1
 		
-	print "Done clustering...<br>"
+	#print "Done clustering...<br>"
 	return clusters
