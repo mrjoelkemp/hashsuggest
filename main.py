@@ -65,6 +65,7 @@ def main():
 	# Compute statistics
 	print "<h2> Statistics </h2>"
 	print_hashtag_frequency(testing_tweets_hashtags)
+	print_average_number_words(testing_tweets_hashtags)
 	print "<hr />"
 	
 	# Testing Set Suggestions

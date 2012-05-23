@@ -25,3 +25,14 @@ def print_hashtag_frequency(tweets_hashtags):
 		print "<td>", freq, "</td>"
 		print "</tr>"
 	print "</table>"
+
+def print_average_number_words(tweets_hashtags):
+	num_tweets = len(tweets_hashtags)
+	sum_nums = 0
+
+	for tweet, hashtag in tweets_hashtags:
+		tweet_words = tweet.split()
+		sum_nums += len(tweet_words)
+
+	average_number_words = sum_nums / num_tweets
+	print "<h3> <b>Average word length: </b>", average_number_words, "</h3>
