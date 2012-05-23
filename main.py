@@ -9,6 +9,7 @@ import sys
 from suggestion import *
 import random
 import segmentation
+from statistics import *
 
 sys.stderr = sys.stdout
 
@@ -63,12 +64,9 @@ def main():
 	testing_tweets_hashtags = zip(raw_tweets, hashtags)
 
 	# Compute statistics
-
-	# Get the set of hashtags
-	hashtag_set = set(hashtags)
-	# Compute the frequency of the hashtags about the output.
-	counts = [hashtags.count(hash) for hash in hashtag_set]
-	hashtag_freqs = zip(list(hashtag_set)), counts)
+	print "<h2> Statistics </h2>"
+	print_hashtag_frequency(testing_tweets_hashtags)
+	
 
 
 	# Query Tweet Suggestion
