@@ -55,18 +55,16 @@ def main():
 	hashtags = [suggest_hashtag(raw, clusters, LUT) for raw in raw_testing]
 	testing_tweets_hashtags = zip(raw_tweets, hashtags)
 
-	# Compute statistics
-	print "<h2> Statistics </h2>"
-	print_hashtag_frequency(testing_tweets_hashtags)
-	
-
-
 	# Query Tweet Suggestion
 	hashtag = suggest_hashtag(queryTweet, clusters, LUT)
 	print "<h2> Suggested Hashtag Output: </h2>"
 	print queryTweet, "<b style='font-size: 18px'>#" + hashtag + "</b>"
 	print "<p>Suggested hashtag: #" + hashtag + "<p>"
 
+	# Compute statistics
+	print "<h2> Statistics </h2>"
+	print_hashtag_frequency(testing_tweets_hashtags)
+		
 	# Testing Set Suggestions
 	print "<h2> Testing Set Output: </h2>"
 	print "<table style='width: 750px;'>"
