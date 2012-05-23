@@ -15,8 +15,8 @@ def main():
 	for t in file:
 		tweets.append(t.replace("\n", ""))
 
-	subtweets = random.sample(tweets, len(tweets)/3)
-	clusters = segmentation.kmeans(subtweets, 5, 20, 0.5)
+	subtweets = random.sample(tweets, len(tweets)/2)
+	clusters = segmentation.kmeans(subtweets, 10, 25, 0.8)
 
 	for i in range(len(clusters)):
 		print "len: %s, dt:%s" % (len(clusters[i].tweets), clusters[i].dt)
