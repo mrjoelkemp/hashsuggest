@@ -26,14 +26,11 @@ def main():
 	
 	# Training set is 2/3 the number of tweets
 	num_training = (2 * len(tweets)) // 3
-	# System training and testing tweets
 	training = random.sample(tweets, num_training)
 	testing = [tweet for tweet in tweets if tweet not in training]
 	
 	# Perform k-means on the training set
 	clusters = segmentation.kmeans(training, k, iteration, (1.0 - cutoff))
-	#for i in range(len(clusters)):
-	#	print "len: %s, dt:%s" % (len(clusters[i].tweets), clusters[i].dt)
 
 	# Grab a stem -> word mapping from the file
 	lut_source = "data/tweetsashton.txt"
@@ -47,18 +44,13 @@ def main():
 	
 	# for each raw tweet:
 	for raw in raw_tweets:
-		# Process it to get the list
 		proc = process_query(raw)
-
-		# Convert the list to a string
 		proc_string = get_tweet_string(proc)
 
 		# If the string is in the training, then continue
-		if proc_string in training:
-			continue
-
-		# Otherwise, store the *raw* string in the raw_testing
-		raw_testing.append(raw)
+		if proc_string not in training:
+			# Otherwise, store the *raw* string in the raw_testing
+			raw_testing.append(raw)
 
 	hashtags = [suggest_hashtag(raw, clusters, LUT) for raw in raw_testing]
 	testing_tweets_hashtags = zip(raw_tweets, hashtags)

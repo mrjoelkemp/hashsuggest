@@ -9,7 +9,7 @@ def print_hashtag_frequency(tweets_hashtags):
 	Precond: 	tweets_hashtags is a tuple consisting of a tweet
 				and its suggested hashtag.
 	"""
-
+	hashtags = [hash for tweet, hash in tweets_hashtags]
 	# Get the set of hashtags
 	hashtag_set = set(hashtags)
 	# Compute the frequency of the hashtags about the output.
