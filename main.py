@@ -66,7 +66,7 @@ def main():
 	print_hashtag_frequency(testing_tweets_hashtags)
 		
 	# Testing Set Suggestions
-	print "<h2> Testing Set Output: </h2>"
+	print "<h2> Testing Set Output:", len(raw_testing), "Testing Tweets","</h2>"
 	print "<table style='width: 750px;'>"
 	print "<tr><td><b>Tweet</b></td><td><b>Suggested Hashtag</b></td></tr>"
 	for raw, hashtag in testing_tweets_hashtags:
