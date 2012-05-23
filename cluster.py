@@ -54,26 +54,3 @@ class Cluster:
 		min_index, min_val = min(enumerate(closest_dist), key=lambda x:x[1])
 
 		return self.tweets[min_index]
-		
-	def computeMaxNormalizedDist(self, tweet):
-		maxDist = 0
-		idx = 0
-		
-		for i, t in enumerate(self.tweets):
-			dist = tweet_distance(t, tweet)
-			
-			if dist > maxDist:
-				maxDist = dist
-				idx = i
-				
-		return float(maxDist) / min(len(tokenise(tweet)), len(tokenise(self.tweets[idx])))
-		
-	def computeMaxNormalizedDist2(self, tweet, cutoff):
-		cnt = 0
-		
-		for t in self.tweets:
-			normDist = float(tweet_distance(t, tweet)) / min(len(tokenise(t)), len(tokenise(tweet)))
-			if normDist >= cutoff:
-				cnt = cnt + 1
-				
-		return cnt
