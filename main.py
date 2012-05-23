@@ -40,17 +40,24 @@ def main():
 
 	# Get the raw, unprocessed tweets
 	raw_tweets = load_tweets(lut_source)
-	#TODO: Print raw tweets for testing set instead of the processed testing
+
+	#Print raw tweets for testing set instead of the processed testing
 	raw_testing = []
 	
 	# for each raw tweet:
+	for raw in raw_tweets:
 		# Process it to get the lsit
+		proc = process_query(raw)
 
 		# Convert the list to a string
+		proc_string = get_tweet_string(proc)
 
 		# If the string is in the training, then continue
+		if proc_string in training:
+			continue
 
-		# Otherwise, store the string in the raw_testing
+		# Otherwise, store the *raw* string in the raw_testing
+		raw_testing.append(raw)
 
 	#for tweet in raw_testing:
 	#	hashtag = suggest_hashtag(tweet, clusters, LUT)
@@ -60,7 +67,16 @@ def main():
 	print queryTweet, "<b style='font-size: 18px'>#" + hashtag + "</b>"
 	print "<p>Suggested hashtag: #" + hashtag + "<p>"
 
-
+	print "<h2> Testing Set Output: </h2>"
+	print "<table>"
+	for raw in raw_testing:
+		hashtag = suggest_hashtag(raw, clusters, LUT)
+		print "<tr>"
+		print "<td>", raw, "</td>"
+		print "<td>", hashtag, "</td>"
+		print "</tr>"
+	print "</table>"
+	
 print "Content-type:text/html\r\n\r\n"
 print '<html>'
 print '<head>'
