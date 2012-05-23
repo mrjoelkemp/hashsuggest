@@ -68,7 +68,7 @@ def main():
 	print "<p>Suggested hashtag: #" + hashtag + "<p>"
 
 	print "<h2> Testing Set Output: </h2>"
-	print "<table>"
+	print "<table style='width: 900px;'>"
 	for raw in raw_testing:
 		hashtag = suggest_hashtag(raw, clusters, LUT)
 		print "<tr>"
@@ -76,7 +76,7 @@ def main():
 		print "<td>", hashtag, "</td>"
 		print "</tr>"
 	print "</table>"
-	
+
 print "Content-type:text/html\r\n\r\n"
 print '<html>'
 print '<head>'
