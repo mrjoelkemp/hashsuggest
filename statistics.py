@@ -36,3 +36,8 @@ def print_average_number_words(tweets_hashtags):
 
 	average_number_words = sum_nums / num_tweets
 	print "<h3> <b>Average tweet length: </b>", average_number_words, "words.</h3>"
+
+def print_cluster_centroids(clusters):
+	print "<h3> Cluster Centroids: </h3>"
+	for i in range(len(clusters)):
+		print "Cluster #" + str(i) + ":", clusters[i].centroid
