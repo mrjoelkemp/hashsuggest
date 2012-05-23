@@ -69,8 +69,8 @@ def main():
 
 	# Testing Set Suggestions
 	print "<h2> Testing Set Output: </h2>"
-	print "<table style='width: 850px;'>"
-	print "<tr><td>Tweet</td><td>Suggested Hashtag</td></tr>"
+	print "<table style='width: 750px;'>"
+	print "<tr><td><b>Tweet</b></td><td><b>Suggested Hashtag</b></td></tr>"
 	for raw, hashtag in testing_tweets_hashtags:
 		print "<tr>"
 		print "<td>", raw, "</td>"

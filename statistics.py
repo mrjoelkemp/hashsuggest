@@ -18,9 +18,10 @@ def print_hashtag_frequency(tweets_hashtags):
 
 	print "<h3> Training Set Hashtag Frequencies </h3>"
 	print "<table style='width: 200px;'>"
-	print "<tr><td>Hashtag</td><td>Frequency</td></tr>"
+	print "<tr><td><b>Hashtag</b></td><td><b>Frequency</b></td></tr>"
 	for hashtag, freq in hashtag_freqs:
 		print "<tr>"
 		print "<td>", "#" + hashtag, "</td>"
 		print "<td>", freq, "</td>"
 		print "</tr>"
+	print "</table>"
