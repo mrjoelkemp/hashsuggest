@@ -9,10 +9,18 @@ def print_hashtag_frequency(tweets_hashtags):
 	Precond: 	tweets_hashtags is a tuple consisting of a tweet
 				and its suggested hashtag.
 	"""
-	hashtags = [hash for tweet, hash in tweets_hashtags]
+	hashtags = [hashtag for tweet, hashtag in tweets_hashtags]
 	# Get the set of hashtags
 	hashtag_set = set(hashtags)
 	# Compute the frequency of the hashtags about the output.
-	counts = [hashtags.count(hash) for hash in hashtag_set]
+	counts = [hashtags.count(hashtag) for hashtag in hashtag_set]
 	hashtag_freqs = zip(list(hashtag_set)), counts)
-	print "TODO"
+
+	print "<h3> Training Set Hashtag Frequencies </h3>"
+	print "<table style='width: 200px;'>"
+	print "<tr><td>Hashtag</td><td>Frequency</td></tr>"
+	for hashtag, freq in hashtag_freqs:
+		print "<tr>"
+		print "<td>", "#" + hashtag, "</td>"
+		print "<td>", freq, "</td>"
+		print "</tr>"
