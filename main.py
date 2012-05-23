@@ -71,8 +71,9 @@ def main():
 	print_average_number_words(testing_tweets_hashtags)
 	print_cluster_centroids(clusters)
 	print "<hr />"
-	
+
 	# List of hashtag suggestions
+	print "<h2> Hashtag Suggestions for Testing Set</h2>"
 	print "<table style='width: 750px;'>"
 	print "<tr><td><b>Tweet</b></td><td><b>Suggested Hashtag</b></td></tr>"
 	for raw, hashtag in testing_tweets_hashtags:
