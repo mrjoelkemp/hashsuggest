@@ -46,7 +46,7 @@ def main():
 	
 	# for each raw tweet:
 	for raw in raw_tweets:
-		# Process it to get the lsit
+		# Process it to get the list
 		proc = process_query(raw)
 
 		# Convert the list to a string
@@ -59,21 +59,32 @@ def main():
 		# Otherwise, store the *raw* string in the raw_testing
 		raw_testing.append(raw)
 
-	#for tweet in raw_testing:
-	#	hashtag = suggest_hashtag(tweet, clusters, LUT)
-	#	print tweet, "#" + hashtag
+	hashtags = [suggest_hashtag(raw, clusters, LUT) for raw in raw_testing]
+	testing_tweets_hashtags = zip(raw_tweets, hashtags)
+
+	# Compute statistics
+
+	# Get the set of hashtags
+	hashtag_set = set(hashtags)
+	# Compute the frequency of the hashtags about the output.
+	counts = [hashtags.count(hash) for hash in hashtag_set]
+	hashtag_freqs = zip(list(hashtag_set)), counts)
+
+
+	# Query Tweet Suggestion
 	hashtag = suggest_hashtag(queryTweet, clusters, LUT)
 	print "<h2> Suggested Hashtag Output: </h2>"
 	print queryTweet, "<b style='font-size: 18px'>#" + hashtag + "</b>"
 	print "<p>Suggested hashtag: #" + hashtag + "<p>"
 
+	# Testing Set Suggestions
 	print "<h2> Testing Set Output: </h2>"
-	print "<table style='width: 900px;'>"
-	for raw in raw_testing:
-		hashtag = suggest_hashtag(raw, clusters, LUT)
+	print "<table style='width: 850px;'>"
+	print "<tr><td>Tweet</td><td>Suggested Hashtag</td></tr>"
+	for raw, hashtag in testing_tweets_hashtags:
 		print "<tr>"
 		print "<td>", raw, "</td>"
-		print "<td>", hashtag, "</td>"
+		print "<td>", "#" + hashtag, "</td>"
 		print "</tr>"
 	print "</table>"
 
