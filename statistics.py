@@ -35,4 +35,4 @@ def print_average_number_words(tweets_hashtags):
 		sum_nums += len(tweet_words)
 
 	average_number_words = sum_nums / num_tweets
-	print "<h3> <b>Average word length: </b>", average_number_words, "</h3>"
+	print "<h3> <b>Average tweet length: </b>", average_number_words, "words.</h3>"
