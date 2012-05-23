@@ -57,20 +57,22 @@ def main():
 
 	# Query Tweet Suggestion
 	hashtag = suggest_hashtag(queryTweet, clusters, LUT)
-	print "<h2> Suggested Hashtag Output: </h2>"
+	print "<h1> Suggested Hashtag Output: </h1>"
 	print queryTweet, "<b style='font-size: 18px'>#" + hashtag + "</b>"
 	print "<p>Suggested hashtag: #" + hashtag + "<p>"
-	print "<hr />"
-
+	print "<hr />"	
+	
+	# Testing Set Suggestions
+	print "<h1> Testing Set Output:", len(raw_testing), "Testing Tweets","</h1>"
+	
 	# Compute statistics
-	print "<h2> Statistics </h2>"
+	print "<h2> Statistics about Testing Set</h2>"
 	print_hashtag_frequency(testing_tweets_hashtags)
 	print_average_number_words(testing_tweets_hashtags)
 	print_cluster_centroids(clusters)
 	print "<hr />"
 	
-	# Testing Set Suggestions
-	print "<h2> Testing Set Output:", len(raw_testing), "Testing Tweets","</h2>"
+	# List of hashtag suggestions
 	print "<table style='width: 750px;'>"
 	print "<tr><td><b>Tweet</b></td><td><b>Suggested Hashtag</b></td></tr>"
 	for raw, hashtag in testing_tweets_hashtags:
