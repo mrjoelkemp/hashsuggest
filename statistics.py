@@ -14,7 +14,7 @@ def print_hashtag_frequency(tweets_hashtags):
 	hashtag_set = set(hashtags)
 	# Compute the frequency of the hashtags about the output.
 	counts = [hashtags.count(hashtag) for hashtag in hashtag_set]
-	hashtag_freqs = zip(list(hashtag_set)), counts)
+	hashtag_freqs = zip(list(hashtag_set), counts)
 
 	print "<h3> Training Set Hashtag Frequencies </h3>"
 	print "<table style='width: 200px;'>"
